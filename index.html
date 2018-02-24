@@ -14,7 +14,7 @@
     <meta name="description" content="">
 
     <script src="jquery.js" onload="window.$ = window.jQuery = module.exports;"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="src/css/base.css">
     <link rel="stylesheet" type="text/css" href="src/css/common.css">
     <link rel="stylesheet" type="text/css" href="src/css/main.css">
@@ -42,13 +42,13 @@
 <body>
     <div class="close"></div>
 
-    <!--头部-->
-<div class="fixed-topnav">
-        <div class="bigt row-center">
-            <img src="./src/images/bigtit.png">
+    <div class="page-main">
+        <!--中间主要内容区域 iframe容器 -->
+        <div class="iframe-wrap" id="center-main">
+            <iframe id="cenFrame" name="iframe0" width="100%" height="100%" src="./src/main.html" frameborder="0"></iframe>
         </div>
+        <!--中间主要内容区域 iframe容器 end-->
     </div>
-    <!--头部 -->
 
     <script type="text/javascript">
         var closeEl = initCloseBtn();
