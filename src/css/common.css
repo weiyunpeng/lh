@@ -101,7 +101,7 @@ background: url("../image/smalllogo.png") center center no-repeat; }
 .win-left-fixed .nlist li.current .n2 { display:block; }
 .anchorBL { display:none; }
     /*中间主区域*/
-.page-main{padding-left:121px; overflow:hidden;}
+.page-main{overflow:hidden;}
 .win-topnav-size { width: 100%; height: 80px; overflow: hidden; }
 .fixed-topnav { position: relative; /*left:0; top:0;*/ width: 100%; height: 80px; /*pointer-events: none;*/ }
 .fixed-topnav .user { position: absolute; right: 25px; top: 20px; }

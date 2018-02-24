@@ -73,6 +73,26 @@
             document.body.requestPointerLock();
         }
     </script>
+
+<script type="text/javascript">
+    $(function(){
+        // 需要动态计算的页面布局高度
+        win_h = $(window).height();
+        function pageSizecalc(){
+            win_h = $(window).height();
+            $('#cenFrame').height(win_h);
+            $("#center-main").height($(window).height() - $(".fixed-topnav").height())
+        }
+        pageSizecalc()
+
+
+        // 窗口缩放后动态调整窗口大小
+        $(window).resize(function(){
+            pageSizecalc()
+        })
+    })
+
+</script>
 </body>
 
 </html>

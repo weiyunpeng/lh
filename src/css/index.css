@@ -1,0 +1,7 @@
+.boxbot {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    margin: 20px;
+    overflow: hidden;
+}
