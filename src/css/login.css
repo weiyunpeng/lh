@@ -1,0 +1,38 @@
+@charset "utf-8";
+html,body{ width:100%; padding-bottom:50px; min-height:630px; ;}
+body{ background:url("../image/login-body-bg.jpg") top center no-repeat; background-size:100% 100%;}
+.login-box .wrap{ overflow:hidden; }
+.login-box .p-tit{ width:1000px; height:60px; margin:auto; margin-top:3%; font-size:50px; color:#1658b3; text-align:center; text-shadow:#eee 1px 1px 2px;
+    /*background:url("../image/login-boxt-t.png") top center no-repeat;*/; font-family:"Microsoft Yahei", "黑体"}
+.login-cen{ width:560px;  margin:auto; margin-top:2%; background:#ffffff; overflow:hidden;
+    border-radius:13px; box-shadow:#666 2px 2px 3px}
+.login-cen .t{ width:100%; height:70px; background:#f0f0f0; line-height:68px; text-align:center; color:#31496a; font-size:30px;  }
+.login-cen .box{ width:380px; margin:auto; margin-top:20px; overflow:hidden; padding-bottom:50px; }
+.login-cen .box input{ width:330px; height:50px; height:42px; line-height:40px; padding-left:46px;; margin-top:15px; margin-bottom:15px;  border-radius:5px; border:#d9d9d9 1px solid; font-size:16px;   }
+.login-cen .box .name{ background:url("../image/user-ico.png") 15px center no-repeat; font-size:16px; }
+.login-cen .box .pass { background:url("../image/locked.png") 17px center no-repeat; font-size:16px; }
+.login-cen .box .btn{ width:380px; height:55px;  border-radius:5px; background:#bababa; text-align:center; line-height:55px; color:#ffffff;
+    font-size:22px; cursor:pointer; overflow:hidden; margin-top:15px;}
+.login-cen .box .tips{ text-align:right; font-size:14px; margin-top:10px; overflow:hidden;}
+.login-cen .box .tips a{ font-size:14px; color:#999999 }
+.login-cen .box .blue{ background:#0c7fd8; }
+.login-cen .box .code{ overflow:hidden; width:100%; }
+.login-cen .box .code .codeimg{ float:right; margin-top:15px; cursor:pointer}
+.login-cen .box .code input{ width:220px; padding-left:20px;; float:left;}
+.pt2{ width:1000px; margin:auto; text-align:center; margin-top:30px;}
+.pt2 span{ display:inline-block; font-size:30px; color:#ffffff; background:#83a6d6; padding:0 30px;
+    border-radius:30px; }
+
+.pass-reset-box{ width:800px;}
+.pass-reset-box .t a{ float:right; padding-right:45px; color:#31496a; font-size:20px;}
+.pass-reset-box .step-tips{ width:666px; height:31px; margin:auto; margin-top:40px;}
+.pass-reset-box .step-tips span{ display:inline-block; width:220px; height:31px; line-height:30px; float:left; font-size:16px; color:#ffffff; text-align:center;}
+.pass-reset-box .step1{ background:url("../image/step1.png") top center no-repeat;}
+.pass-reset-box .step2 { background:url("../image/step2.png") top center no-repeat; }
+.pass-reset-box .step3 { background:url("../image/step3.png") top center no-repeat; }
+.pass-reset-box .w2{ width:355px !important;padding-left:20px !important;}
+.pass-reset-box .send-code-btn{ float:right; width:90px; margin-top:15px; height:46px; line-height:46px; padding:0 15px !important;}
+.pass-reset-box .gray{ background:#bababa !important;}
+.pass-reset-box .step2_con .b2{ height:45px; line-height:45px; width:120px; margin-top:15px; }
+.pass-reset-box .step3_con .succ-tips{ padding:45px 0; text-align:center; font-size:30px; }
+

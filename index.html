@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2018全国两会河南代表委员大数据</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <script src="jquery.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    
+    <link rel="stylesheet" type="text/css" href="src/css/base.css">
+    <link rel="stylesheet" type="text/css" href="src/css/common.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/swiper.min.css">
+    <style>
+        .close {
+            background-image: url('button_close.png');
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            z-index: 1000;
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+            -webkit-app-region: no-drag;
+        }
+
+        .close:hover {
+            background-image: url('button_close_hover.png');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="close"></div>
+
+    <!--头部-->
+<div class="fixed-topnav">
+        <div class="bigt row-center">
+            <img src="./src/images/bigtit.png">
+        </div>
+    </div>
+    <!--头部 -->
+
+    <script type="text/javascript">
+        var closeEl = initCloseBtn();
+
+        function initCloseBtn() {
+            var closeEl = document.querySelector(".close");
+            if (closeEl) {
+                closeEl.addEventListener('click', function () {
+                    window.close();
+                });
+            };
+            return closeEl;
+        }
+
+        function onDocumentMouseDown(event) {
+            if (event.target == closeEl) return; // it should deliver click to close button
+
+            document.body.requestPointerLock =
+                document.body.requestPointerLock ||
+                document.body.mozRequestPointerLock ||
+                document.body.webkitRequestPointerLock;
+            document.body.requestPointerLock();
+        }
+    </script>
+</body>
+
+</html>
