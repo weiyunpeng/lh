@@ -12,6 +12,12 @@
     <meta http-equiv="Expires" content="0">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/lodash.min.js"></script>
+    <script src="./lib/echarts.min.js"></script>
+    <script src="./lib/soda.js"></script>
+    <script src="./js/coor.js"></script>
+    <script src="./lib/jquery.animateNumber.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/base.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
@@ -34,18 +40,48 @@
             <!-- 播放次数 -->
             <div class="left-top column">
                 <ul>
-                    <li>
-                        <div class="name">累计播放次数</div>
-                        <div class="val">
-                            <span>8899785485</span>次
+                    <li class="left-top-li row-center">
+                        <div class="left-top-li-name">累计播放次数</div>
+                        <div class="left-top-li-val">
+                            <span class="left-top-li-val-num1">8899785485</span>次
+                        </div>
+                    </li>
+                    <li class="left-top-li row-center">
+                        <div class="left-top-li-name">今年播放次数</div>
+                        <div class="left-top-li-val">
+                            <span class="left-top-li-val-num2">8899785485</span>次
+                        </div>
+                    </li>
+                    <li class="left-top-li row-center">
+                        <div class="left-top-li-name">本月播放次数</div>
+                        <div class="left-top-li-val">
+                            <span class="left-top-li-val-num3">8899785485</span>次
                         </div>
                     </li>
                 </ul>
             </div>
-            <!-- 播放次数结束 -->
+            <!-- 播放次数 end-->
+
+            <!-- 两会热词 -->
+            <div class="left-bottom c-content">
+                <ul class="word z-hide" id="word">
+                    <li soda-repeat="txt in list" class="w-{{$index+1}}">{{txt}}</li>
+                </ul>
+                <ul class="word" id="detail"></ul>
+            </div>
+            <!-- 两会热词 end -->
         </div>
         <!-- 左边部分 end -->
+
+        <!-- 中间部分 -->
+        <div class="centerbox column"></div>
+        <!-- 中间部分 end-->
     </div>
+
+    <script src="./lib/dyw.min.js"></script>
+    <script src="./lib/laydate/laydate.js"></script>
+    <script src="./lib/swiper.min.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 

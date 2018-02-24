@@ -3,7 +3,6 @@
  * 词条印象
  */
 
-// 龙门热词
 loadData({
     type: 'get',
     url: '/api/substance/keyword',

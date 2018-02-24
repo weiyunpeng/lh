@@ -306,8 +306,8 @@ var myStyleJson = [
 // 封装ajax数据调用层
 function loadData(para) {
      var type=para.type||'get';
-    // var url='http://testdsj.qqdayu.com'+para.url; // 临时用的接口地址 ，正式环境请注释掉
-     var url= window.location.origin+ para.url; //  部署到服务器上后，去掉此行的注释，把上面临时的接口注释掉
+    // var url='http://testdsj.qqdayu.com'+para.url;window.location.origin+  // 临时用的接口地址 ，正式环境请注释掉
+     var url= para.url; //  部署到服务器上后，去掉此行的注释，把上面临时的接口注释掉
      var ajax=function () {
          $.ajax({
              type: type,
