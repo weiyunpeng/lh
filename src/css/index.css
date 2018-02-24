@@ -47,3 +47,29 @@
 }
 
 /* 中间模块 */
+.centerbox{
+    width: 723px;
+    margin-left: 50px;
+    overflow: hidden;
+}
+.centerbox .mapbox {
+    width: 860px;
+    height: 482px;
+    overflow: hidden;
+    background: url("./../images/map-bg.png") no-repeat;
+}
+.centerbox .mapbox .bmap {
+    width: 712px;
+    height: 413px;
+    overflow: hidden;
+    margin-left: 6px;
+    margin-top: 15px;
+}
+
+.friendsbox{
+    width: 860px;
+    height: 324px;
+    overflow: hidden;
+    position: relative;
+    top: -24px;
+}

@@ -3124,12 +3124,10 @@ textarea {
 }
 
 .c-content .mood {
-    width: 763px;
-    height: 317px;
-    background: url("http://d.qqdyw.cn/web/image/c-mood.png") no-repeat;
-    padding-top: 12px;
-    margin-left: 25px;
-    float: left;
+    width: 860px;
+    height: 335px;
+    overflow: hidden;
+    background: url("./../images/friends-bg.png") no-repeat;
 }
 
 .c-content .mood .progress {
@@ -3173,7 +3171,7 @@ textarea {
 }
 
 .c-content .mood .slider {
-    width: 763px;
+    width: 717px;
     height: 235px;
     padding-top: 48px;
     position: relative;
@@ -3198,7 +3196,7 @@ textarea {
 }
 
 .c-content .mood .slider .swiper {
-    width: 708px;
+    width: 658px;
     height: 235px;
     margin: 0 auto;
     overflow: hidden;
@@ -3222,11 +3220,12 @@ textarea {
 }
 
 .c-content .mood .comment li .inner {
-    width: 326px;
+    width: 296px;
     height: 32px;
-    border: 1px solid #2f919a;
+    border: 1px solid #51FFFF;
     padding: 5px 10px;
     position: relative;
+    margin-left: 5px;
 }
 
 .c-content .mood .comment li .inner .del {
@@ -3256,7 +3255,7 @@ textarea {
     height: 32px;
     line-height: 16px;
     font-size: 12px;
-    color: #51ffff;
+    color: #243E9E;
     text-align: left;
     overflow: hidden;
 }

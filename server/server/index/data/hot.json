@@ -2,6 +2,12 @@
     "code": 0,
     "msg": "",
     "result": {
+        "total": {
+            "number": 563254,
+            "news": 32011,
+            "read": 2142,
+            "comment": 74100
+        },
         "hot": [
             "龙门相册",
             "人工智能",
@@ -30,6 +36,654 @@
             "方便快捷",
             "1秒入园",
             "智能景区"
+        ],
+        "map": [
+            {
+                "id": "y1",
+                "name": "大石门",
+                "show": true
+            },
+            {
+                "id": "y2",
+                "name": "松林",
+                "show": false
+            },
+            {
+                "id": "y3",
+                "name": "龙门桥",
+                "show": true
+            },
+            {
+                "id": "y4",
+                "name": "石窟北大门",
+                "show": true
+            },
+            {
+                "id": "y5",
+                "name": "禹王池",
+                "show": true
+            },
+            {
+                "id": "y6",
+                "name": "潜溪寺",
+                "show": true
+            },
+            {
+                "id": "y7",
+                "name": "陈抟十字卷碑",
+                "show": false
+            },
+            {
+                "id": "y8",
+                "name": "宾阳洞区",
+                "show": true
+            },
+            {
+                "id": "y9",
+                "name": "伊阙佛龛之碑",
+                "show": false
+            },
+            {
+                "id": "y10",
+                "name": "宾阳中洞",
+                "show": true
+            },
+            {
+                "id": "y11",
+                "name": "宾阳南洞",
+                "show": false
+            },
+            {
+                "id": "y12",
+                "name": "宾阳北洞",
+                "show": false
+            },
+            {
+                "id": "y13",
+                "name": "敬善寺",
+                "show": false
+            },
+            {
+                "id": "y14",
+                "name": "摩崖三佛龛",
+                "show": false
+            },
+            {
+                "id": "y15",
+                "name": "步步生莲",
+                "show": true
+            },
+            {
+                "id": "y16",
+                "name": "佛手牡丹石",
+                "show": true
+            },
+            {
+                "id": "y17",
+                "name": "万佛洞",
+                "show": false
+            },
+            {
+                "id": "y18",
+                "name": "双窑",
+                "show": false
+            },
+            {
+                "id": "y19",
+                "name": "清明寺",
+                "show": false
+            },
+            {
+                "id": "y20",
+                "name": "惠简洞",
+                "show": false
+            },
+            {
+                "id": "y21",
+                "name": "老龙洞",
+                "show": false
+            },
+            {
+                "id": "y22",
+                "name": "慈香窑",
+                "show": false
+            },
+            {
+                "id": "y23",
+                "name": "莲花洞",
+                "show": false
+            },
+            {
+                "id": "y24",
+                "name": "郭公路方公路",
+                "show": false
+            },
+            {
+                "id": "y25",
+                "name": "普泰洞",
+                "show": false
+            },
+            {
+                "id": "y26",
+                "name": "赵客师洞",
+                "show": false
+            },
+            {
+                "id": "y27",
+                "name": "破窑",
+                "show": false
+            },
+            {
+                "id": "y28",
+                "name": "魏字洞",
+                "show": false
+            },
+            {
+                "id": "y29",
+                "name": "唐字洞",
+                "show": true
+            },
+            {
+                "id": "y30",
+                "name": "交脚弥勒像龛",
+                "show": false
+            },
+            {
+                "id": "y31",
+                "name": "奉先寺",
+                "show": true
+            },
+            {
+                "id": "y32",
+                "name": "大卢舍那像龛记碑",
+                "show": false
+            },
+            {
+                "id": "y33",
+                "name": "奉南洞",
+                "show": false
+            },
+            {
+                "id": "y34",
+                "name": "大唐内侍省功德碑",
+                "show": false
+            },
+            {
+                "id": "y35",
+                "name": "火烧洞",
+                "show": false
+            },
+            {
+                "id": "y36",
+                "name": "皇甫公窟",
+                "show": false
+            },
+            {
+                "id": "y37",
+                "name": "八作司洞",
+                "show": false
+            },
+            {
+                "id": "y38",
+                "name": "龙华寺洞",
+                "show": true
+            },
+            {
+                "id": "y39",
+                "name": "北市綵帛行净土宗",
+                "show": true
+            },
+            {
+                "id": "y40",
+                "name": "古阳洞",
+                "show": false
+            },
+            {
+                "id": "y41",
+                "name": "药方洞",
+                "show": false
+            },
+            {
+                "id": "y42",
+                "name": "路洞",
+                "show": false
+            },
+            {
+                "id": "y43",
+                "name": "北市丝行像龛",
+                "show": false
+            },
+            {
+                "id": "y44",
+                "name": "汴州洞",
+                "show": false
+            },
+            {
+                "id": "y45",
+                "name": "地花洞",
+                "show": false
+            },
+            {
+                "id": "y46",
+                "name": "唐增陇西县君牛式像龛碑",
+                "show": false
+            },
+            {
+                "id": "y47",
+                "name": "极南洞",
+                "show": false
+            },
+            {
+                "id": "y48",
+                "name": "袁弘绩洞",
+                "show": false
+            },
+            {
+                "id": "y49",
+                "name": "伊河",
+                "show": true
+            },
+            {
+                "id": "y50",
+                "name": "西方净土变龛",
+                "show": true
+            },
+            {
+                "id": "y51",
+                "name": "千手千眼观音像龛",
+                "show": false
+            },
+            {
+                "id": "y52",
+                "name": "高平郡王洞",
+                "show": false
+            },
+            {
+                "id": "y53",
+                "name": "看经寺",
+                "show": true
+            },
+            {
+                "id": "y54",
+                "name": "二莲花洞",
+                "show": false
+            },
+            {
+                "id": "y55",
+                "name": "四雁洞",
+                "show": false
+            },
+            {
+                "id": "y56",
+                "name": "礼佛观景台",
+                "show": true
+            },
+            {
+                "id": "y57",
+                "name": "香山寺",
+                "show": true
+            },
+            {
+                "id": "y58",
+                "name": "蒋宋别墅",
+                "show": false
+            },
+            {
+                "id": "y59",
+                "name": "乾隆御碑",
+                "show": false
+            },
+            {
+                "id": "y60",
+                "name": "九老堂",
+                "show": false
+            },
+            {
+                "id": "y61",
+                "name": "石楼",
+                "show": false
+            },
+            {
+                "id": "y62",
+                "name": "白园",
+                "show": false
+            },
+            {
+                "id": "y63",
+                "name": "诗廊区",
+                "show": false
+            },
+            {
+                "id": "y64",
+                "name": "白园墓区",
+                "show": true
+            },
+            {
+                "id": "y65",
+                "name": "乐天堂",
+                "show": true
+            }
+        ],
+        "commpents": [
+            {
+                "id": "769",
+                "content":
+                    "作为昨天刚刚游览完龙门景区的普通游客，衷心祝福景区建设更上一层楼，下次来更不一样。",
+                "positive": 70,
+                "negative": 30
+            },
+            {
+                "id": "770",
+                "content": "大赞！龙门石窟！",
+                "positive": 100,
+                "negative": 0
+            },
+            {
+                "id": "771",
+                "content": "确实不错，赞",
+                "positive": 97,
+                "negative": 3
+            },
+            {
+                "id": "762",
+                "content": "龙门的每一帧美景都可以当壁纸了",
+                "positive": 79,
+                "negative": 21
+            },
+            {
+                "id": "763",
+                "content": "暖意龙门，美不胜收！",
+                "positive": 91,
+                "negative": 9
+            },
+            {
+                "id": "764",
+                "content": "大龙门，棒棒哒。",
+                "positive": 99,
+                "negative": 1
+            },
+            {
+                "id": "765",
+                "content": "在这美好的时节与家人、朋友携手来龙门石窟旅游吧！",
+                "positive": 86,
+                "negative": 15
+            },
+            {
+                "id": "766",
+                "content": "龙门的微信语音解说很给力，Verygood!",
+                "positive": 99,
+                "negative": 1
+            },
+            {
+                "id": "767",
+                "content": "天下龙门第一景，美，美",
+                "positive": 66,
+                "negative": 34
+            },
+            {
+                "id": "752",
+                "content":
+                    "刚刚去过那里心似乎还在河南还在龙门石窟，静静地伊河宏伟的石雕让人难忘还会再去的。",
+                "positive": 85,
+                "negative": 15
+            },
+            {
+                "id": "753",
+                "content": "世界文化遗产通过互联网以崭新的姿态再次走向世界！",
+                "positive": 93,
+                "negative": 8
+            },
+            {
+                "id": "754",
+                "content":
+                    "中国历史渊源流长，中华文化博大精深，龙门药方洞扶危救困造福万民。古往今来，中国真的了不起，厉害了，我的国!",
+                "positive": 90,
+                "negative": 10
+            },
+            {
+                "id": "755",
+                "content": "千年文明不忘与时俱进，龙门石窟再续辉煌！",
+                "positive": 87,
+                "negative": 13
+            },
+            {
+                "id": "756",
+                "content":
+                    "身为洛阳人，为有龙门石窟而骄傲自豪。秋阳下的龙门，更是美不胜收。闲暇，到龙门赏秋景去！",
+                "positive": 69,
+                "negative": 31
+            },
+            {
+                "id": "757",
+                "content": "龙门石窟是中华民族的国宝。",
+                "positive": 67,
+                "negative": 33
+            },
+            {
+                "id": "758",
+                "content": "为大洛阳的龙门石窟骄傲！加油！",
+                "positive": 69,
+                "negative": 31
+            },
+            {
+                "id": "759",
+                "content": "为龙门点赞",
+                "positive": 98,
+                "negative": 2
+            },
+            {
+                "id": "760",
+                "content":
+                    "龙门石窟在应用新技术方面走在了全国景区的前列，值得其他景区学习",
+                "positive": 98,
+                "negative": 2
+            },
+            {
+                "id": "761",
+                "content": "龙门既古老又年轻，棒棒哒！",
+                "positive": 99,
+                "negative": 1
+            },
+            {
+                "id": "713",
+                "content": "洛阳龙门石窟值得去的地方",
+                "positive": 94,
+                "negative": 6
+            },
+            {
+                "id": "715",
+                "content": "佛教徒们的朝圣之地",
+                "positive": 50,
+                "negative": 50
+            },
+            {
+                "id": "716",
+                "content": "中国首家互联网＋的文化旅游圣地",
+                "positive": 76,
+                "negative": 24
+            },
+            {
+                "id": "717",
+                "content": "挺美的，山水相抱！",
+                "positive": 99,
+                "negative": 1
+            },
+            {
+                "id": "718",
+                "content": "非常值得一去",
+                "positive": 98,
+                "negative": 2
+            },
+            {
+                "id": "719",
+                "content":
+                    "游览回来后，一直关注龙门石窟公众号。足不出户就又能欣赏到龙门石窟不同季节的不同美景，风景风物风俗应有尽有！",
+                "positive": 70,
+                "negative": 30
+            },
+            {
+                "id": "720",
+                "content":
+                    "龙门石窟久负盛名，值得一去，既有传统文化之优美，又有现代智慧景点之创意！",
+                "positive": 81,
+                "negative": 19
+            },
+            {
+                "id": "721",
+                "content":
+                    "去过河南那么多景区，无论景色还是工作人员整体素质龙门评价是最高的。有机会还会带朋友去。",
+                "positive": 69,
+                "negative": 31
+            },
+            {
+                "id": "705",
+                "content": "厉害厉害，给我大洛阳赞一个",
+                "positive": 98,
+                "negative": 2
+            },
+            {
+                "id": "706",
+                "content": "洛阳牛气，龙门威武霸气！",
+                "positive": 97,
+                "negative": 3
+            },
+            {
+                "id": "707",
+                "content": "龙门创新好快啊",
+                "positive": 90,
+                "negative": 10
+            },
+            {
+                "id": "708",
+                "content":
+                    "龙门石窟一一一语音讲解，刷脸入园超前科技用于赏景是洛阳的骄傲。",
+                "positive": 59,
+                "negative": 41
+            },
+            {
+                "id": "709",
+                "content":
+                    "新世纪，新潮流，新时代，新科技，创新一流在龙门体验。使之成为世界旅游新时尚。点赞！洛阳龙门腾飞！",
+                "positive": 87,
+                "negative": 13
+            },
+            {
+                "id": "710",
+                "content": "“十一”假期，向着龙门石窟出发吧！",
+                "positive": 50,
+                "negative": 50
+            },
+            {
+                "id": "711",
+                "content": "去了好多地方，还是觉得龙门风景好",
+                "positive": 50,
+                "negative": 50
+            },
+            {
+                "id": "675",
+                "content":
+                    "龙门石窟是国内少数真正实现智慧旅游的景区之一，是我第一次体验智慧旅游的景点，全程都有二维码扫描的告示牌，微信公众号还有语音讲解，虽然没有请导游还是有很大收获，直到现在都觉得这体验太赞了",
+                "positive": 77,
+                "negative": 23
+            },
+            {
+                "id": "676",
+                "content":
+                    "去龙门石窟之前一直以为石窟仅仅一尊大佛，真正到那里以后，才发现偌大的石窟群竟如此震撼！前人的雕琢技艺着实让人赞叹不已！如果有机会，我愿意再次光临！",
+                "positive": 63,
+                "negative": 37
+            },
+            {
+                "id": "677",
+                "content":
+                    "龙门石窟景区，有着浓厚古老的底蕴，又不失时尚新潮的气韵，每次去都有新的感受，就是这么一个大气端庄的所在！",
+                "positive": 74,
+                "negative": 26
+            },
+            {
+                "id": "678",
+                "content": "果然是个仙境！四季皆宜的旅游胜地！以后每年都会去。",
+                "positive": 83,
+                "negative": 17
+            },
+            {
+                "id": "679",
+                "content":
+                    "最有特色的当属智慧停车厂，微信收费，很方便，值得推光！",
+                "positive": 93,
+                "negative": 8
+            },
+            {
+                "id": "680",
+                "content":
+                    "最近自驾去了趟龙门，购票环节微信支付快捷，景区内WIFI讲解，停车微信支付后，勿须等待，确实便捷。",
+                "positive": 83,
+                "negative": 17
+            },
+            {
+                "id": "681",
+                "content":
+                    "去龙门石窟玩，被这种智慧景区的科技化震撼到了，买票、入园、讲解、WIFI、停车费，太棒了！为龙门石窟点个赞",
+                "positive": 84,
+                "negative": 16
+            },
+            {
+                "id": "652",
+                "content":
+                    "龙门石窟景区的这个微信平台太好了，原来鲤鱼跳龙门是怎么回事。我们在游览景区的同时，又学到了不少知识，真是双赢。",
+                "positive": 95,
+                "negative": 5
+            },
+            {
+                "id": "655",
+                "content":
+                    "洛阳最棒，龙门最棒！与时俱进，开拓创新，成功迈入互联网智能时代，让洛阳又多了一个新的亮点！",
+                "positive": 71,
+                "negative": 29
+            },
+            {
+                "id": "656",
+                "content": "洛阳人民的骄傲！龙门最棒！",
+                "positive": 51,
+                "negative": 49
+            },
+            {
+                "id": "657",
+                "content": "利用先进科技，把龙门文化传遍世界！",
+                "positive": 65,
+                "negative": 35
+            },
+            {
+                "id": "658",
+                "content":
+                    "去年9月份自驾从浙江杭州去过洛阳龙门石窟，讲解手机上可扫描输入编号就能听清晰的讲解，感觉龙门石窟做的非常好",
+                "positive": 83,
+                "negative": 17
+            },
+            {
+                "id": "659",
+                "content": "真的很好，微信解说真棒",
+                "positive": 98,
+                "negative": 2
+            },
+            {
+                "id": "660",
+                "content": "龙门石窟又迈向新时代！超级棒",
+                "positive": 99,
+                "negative": 1
+            },
+            {
+                "id": "642",
+                "content": "游龙门越来越方便了，真正的智慧景区",
+                "positive": 81,
+                "negative": 19
+            },
+            {
+                "id": "643",
+                "content": "希望越来越好！",
+                "positive": 97,
+                "negative": 3
+            }
         ]
     }
 }

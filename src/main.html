@@ -12,17 +12,22 @@
     <meta http-equiv="Expires" content="0">
     <meta name="keywords" content="">
     <meta name="description" content="">
+
     <script src="./lib/jquery.min.js"></script>
     <script src="./lib/lodash.min.js"></script>
     <script src="./lib/echarts.min.js"></script>
     <script src="./lib/soda.js"></script>
     <script src="./js/coor.js"></script>
     <script src="./lib/jquery.animateNumber.js"></script>
+
     <link rel="stylesheet" type="text/css" href="./css/base.css">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=DvG5p5CZvkrtjRGDdGmaGX3ZfqYWvt9X"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js"></script>
 </head>
 
 <body>
@@ -34,7 +39,7 @@
     </div>
     <!--头部 end-->
 
-    <div class="boxbot">
+    <div class="boxbot row">
         <!-- 左边部分 -->
         <div class="leftbox column">
             <!-- 播放次数 -->
@@ -43,19 +48,19 @@
                     <li class="left-top-li row-center">
                         <div class="left-top-li-name">累计播放次数</div>
                         <div class="left-top-li-val">
-                            <span class="left-top-li-val-num1">8899785485</span>次
+                            <span class="left-top-li-val-num1" id="totalNum">0</span>次
                         </div>
                     </li>
                     <li class="left-top-li row-center">
                         <div class="left-top-li-name">今年播放次数</div>
                         <div class="left-top-li-val">
-                            <span class="left-top-li-val-num2">8899785485</span>次
+                            <span class="left-top-li-val-num2" id="newsNum">0</span>次
                         </div>
                     </li>
                     <li class="left-top-li row-center">
                         <div class="left-top-li-name">本月播放次数</div>
                         <div class="left-top-li-val">
-                            <span class="left-top-li-val-num3">8899785485</span>次
+                            <span class="left-top-li-val-num3" id="readNum">0</span>次
                         </div>
                     </li>
                 </ul>
@@ -74,7 +79,44 @@
         <!-- 左边部分 end -->
 
         <!-- 中间部分 -->
-        <div class="centerbox column"></div>
+        <div class="centerbox column">
+            <!-- 地图 -->
+            <div class="mapbox">
+                <div class="bmap" id="yuyinbMap"></div>
+            </div>
+            <!-- 地图 end -->
+
+            <!-- 网友评论 -->
+            <div class="friendsbox c-content">
+                <div class="mood">
+                    <div class="slider">
+                        <div class="page left"></div>
+                        <div class="page right"></div>
+
+                        <!-- Swiper start -->
+                        <div class="swiper-container swiper">
+                            <div class="comment z-hide" id="comment">
+                                <ul class="message swiper-slide" soda-repeat="des2 in list2">
+                                    <li soda-repeat="mess in des2">
+                                        <div class="inner">
+                                            <span class="del">{{mess.id}}
+                                                <strong></strong>
+                                            </span>
+                                            <p class="des">{{mess.content}}</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="comment swiper-wrapper" id="detail4"></div>
+                        </div>
+                        <!-- Swiper end -->
+                    </div>
+                </div>
+            </div>
+            <!-- 网友评论 end -->
+        </div>
         <!-- 中间部分 end-->
     </div>
 
