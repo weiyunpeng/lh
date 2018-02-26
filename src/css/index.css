@@ -9,6 +9,7 @@
 /* 左边模块 */
 .leftbox{
     width: 396px;
+    height: 800px;
 }
 .leftbox .left-top{
     width: 100%;
@@ -28,10 +29,12 @@
     left: -20px;
 }
 .left-top-li-val span{
+    font-family: Arial, Helvetica, sans-serif;
     position: relative;
     font-size: 24px;
     padding: 6px 8px;
     margin-right: 10px;
+    font-weight: bold;
 }
 .left-top-li-val-num1{
     color: #FFFFFF;
@@ -48,28 +51,62 @@
 
 /* 中间模块 */
 .centerbox{
-    width: 723px;
+    position: relative;
+    width: 724px;
+    height: 800px;
     margin-left: 50px;
     overflow: hidden;
 }
 .centerbox .mapbox {
-    width: 860px;
+    position: relative;
+    top: -12px;
+    width: 724px;
     height: 482px;
     overflow: hidden;
     background: url("./../images/map-bg.png") no-repeat;
 }
 .centerbox .mapbox .bmap {
-    width: 712px;
+    width: 714px;
     height: 413px;
     overflow: hidden;
-    margin-left: 6px;
+    margin-left: 3px;
     margin-top: 15px;
 }
+.centerbox .map-area{
+    position: absolute;
+    z-index: 88;
+    bottom: 63px;
+    right: 20px;
+}
 
-.friendsbox{
-    width: 860px;
-    height: 324px;
+.centerbox  .friendsbox{
+    width: 724px;
+    height: 338px;
     overflow: hidden;
     position: relative;
-    top: -24px;
+    top: -10px;
+}
+
+/* 右边部分 */
+.rightbox{
+    position: relative;
+    top: -6px;
+    width: 355px;
+    height: 800px;
+    margin-left: 50px;
+    overflow: hidden;
+}
+.right-top{
+    background: url("../images/peonum-bg.png") no-repeat;
+    background-size: cover;
+    width: 355px;
+    height: 122px;
+}
+.right-bottom{
+    background: url("../images/datum-bg.png") no-repeat;
+    background-size: cover;
+    width: 395px;
+    height: 648px;
+    position: relative;
+    top: 28px;
 }

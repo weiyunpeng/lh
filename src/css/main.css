@@ -3124,9 +3124,10 @@ textarea {
 }
 
 .c-content .mood {
-    width: 860px;
+    width: 724px;
     height: 335px;
     overflow: hidden;
+    background-size: cover;
     background: url("./../images/friends-bg.png") no-repeat;
 }
 
@@ -3171,9 +3172,9 @@ textarea {
 }
 
 .c-content .mood .slider {
-    width: 717px;
+    width: 716px;
     height: 235px;
-    padding-top: 48px;
+    padding-top: 60px;
     position: relative;
     overflow: hidden;
 }

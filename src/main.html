@@ -82,6 +82,7 @@
         <div class="centerbox column">
             <!-- 地图 -->
             <div class="mapbox">
+                <img src="./images/area.png" class="map-area">
                 <div class="bmap" id="yuyinbMap"></div>
             </div>
             <!-- 地图 end -->
@@ -118,6 +119,25 @@
             <!-- 网友评论 end -->
         </div>
         <!-- 中间部分 end-->
+
+        <!-- 右侧部分 -->
+        <div class="rightbox column">
+            <!-- 当前代表人数 -->
+            <div class="right-top">
+                <ul class="row z-hide" id="peopleWord">
+                    <li soda-repeat="item in count" class="right-top-num">{{item}}</li>
+                </ul>
+                <ul class="row" id="peopleDetail">
+                </ul>
+            </div>
+            <!-- 当前代表人数 end-->
+
+            <!-- 数据分析 -->
+            <div class="right-bottom">
+            </div>
+            <!-- 数据分析 end-->
+        </div>
+        <!-- 右侧部分 end -->
     </div>
 
     <script src="./lib/dyw.min.js"></script>

@@ -182,6 +182,15 @@ $("body").on('click', '.inner', function () {
     })
 })
 
+// 当前代表人数
+function qry_people(res){
+    var result = res.result.hot;
+    var tpl = $("#word").html();
+    var data={};
+    data.list= result;
+    $("#detail").html(soda(tpl, data))
+}
+
 // 查询
 loadData({
     type: 'get',
