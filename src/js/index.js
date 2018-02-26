@@ -122,7 +122,6 @@ function qry_map(res){
     // 添加65个语音画册点位
     mapRoot.yuyinAdd()
     // 获取所有语音点位的闪烁状态
-    console.log(res.result.map)
     res.result.map.forEach(function (val, key) {
         if (val.show) {
             mapRoot.coMarkObj[val.id].show()
