@@ -13,11 +13,11 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
     // Create the browser window.
     let windowOptions = {
-        width: 1080,
+        width: 1920,
         minWidth: 680,
-        height: 840,
+        height: 1080,
         title: app.getName(),
-        frame: false
+        frame: true
     };
     mainWindow = new BrowserWindow(windowOptions);
     // Launch fullscreen with DevTools open, usage: npm run debug
@@ -27,7 +27,7 @@ app.on('ready', function() {
         require('devtron').install();
     }
     // and load the index.html of the app.
-    mainWindow.loadURL('file://' + __dirname + '/index.html');
+    mainWindow.loadURL('file://' + __dirname + '/main.html');
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function() {

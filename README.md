@@ -17,7 +17,9 @@ npm run dev
 npm run package
 
 -  打某个平台的包
-npm run package:mac
+苹果： npm run package:mac  
+windows: npm run package:win  
+liunx: npm run package:linux
 ```
 
 ### 改动配置
