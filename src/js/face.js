@@ -2,8 +2,6 @@ var socket = io('http://socket.qqdayu.com');
 var canvasWidth = 640;
 var canvasHeight = 480;
 
-var faceWidth = canvasWidth;
-var faceHight = canvasHeight;
 var faceRadius = 240;
 var facelimite = 100;
 
@@ -35,16 +33,16 @@ socket.on('clientOpenFaceScanLayer', function(data) {
 
 // faceTrack();
 function faceTrack() {
+    flag = true;
+    $('#warpFace').show();
+    $('#faceVideo').show();
+
     tracker = new tracking.ObjectTracker(['face', 'eye']);
     tracker.setInitialScale(4);
     tracker.setStepSize(2);
     tracker.setEdgesDensity(0.1);
     trackerTask = tracking.track('#faceVideo', tracker, { camera: true });
-
-    flag = true;
     trackerTask.run();
-    $('#warpFace').show();
-    $('#faceVideo').show();
 
     tracker.on('track', function(event) {
         context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
@@ -66,13 +64,6 @@ function faceTrack() {
             // setTimeout(function() {
             //     saveFace(rect);
             // }, 2000);
-            // 接收截取照片的事件
-            socket.on('clientCaptureSnapshot', function(data) {
-                // 截取照片
-                // todo
-                console.log('抓取照片');
-                saveFace(rect);
-            });
         });
     });
 }
@@ -103,6 +94,13 @@ function saveFace(rect) {
     }
     flag = false;
     trackerTask.stop();
+    // 接收截取照片的事件
+    socket.on('clientCaptureSnapshot', function(data) {
+        // 截取照片
+        // todo
+        console.log('抓取照片');
+        saveFace(rect);
+    });
     $('#faceVideo').hide();
     faceSuc(rect);
 }
@@ -129,14 +127,6 @@ function faceSuc(rect) {
             //     faceRadius
             // );
             $('#faceText1').show();
-            // $('#faceNearby').snabbt({
-            //     fromOpacity: 0,
-            //     opacity: 1,
-            //     easing: 'easeOut'
-            // });
-            // setTimeout(function() {
-            //     showFaceRes(rect);
-            // }, 2000);
         } catch (err) {
             console.log(err);
         }
@@ -168,6 +158,7 @@ socket.on('clientCloseFaceScanLayer', function(data){
     // 关闭人脸识别弹层
     // todo
     console.log('关闭人脸识别');
+    context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
     flag = false;
     trackerTask.stop();
     $('#warpFace').hide();
