@@ -22,6 +22,3 @@ windows: npm run package:win
 liunx: npm run package:linux
 ```
 
-### 改动配置
-
-大部分的参数配置都在`main.js`里面,开箱即用。
