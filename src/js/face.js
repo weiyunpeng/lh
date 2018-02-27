@@ -13,6 +13,7 @@ var tracker;
 var trackerTask;
 
 var flag = true;
+var faceInfo;
 
 faceCanvas.width = canvasWidth;
 faceCanvas.height = canvasHeight;
@@ -27,7 +28,27 @@ socket.on('clientOpenFaceScanLayer', function(data) {
     console.log('启动人脸识别');
     faceTrack();
 });
+// 接收截取照片的事件
+socket.on('clientCaptureSnapshot', function(data) {
+    // 截取照片
+    // todo
+    console.log('抓取照片' + data);
+    saveFace();
+});
+// 选取人脸识别人物
+socket.on('clientChoosePeople', function(data){
+    // 截取照片
+    // todo
+    console.log(data.people);
+    $('#faceText1').text(data.people);
+})
 
+tracker = new tracking.ObjectTracker(['face', 'eye']);
+tracker.setInitialScale(4);
+tracker.setStepSize(2);
+tracker.setEdgesDensity(0.1);
+trackerTask = tracking.track('#faceVideo', tracker, { camera: true });
+trackerTask.stop();
 // trackerTask.stop(); // Stops the tracking
 // trackerTask.run(); // Runs it again anytime
 
@@ -36,12 +57,6 @@ function faceTrack() {
     flag = true;
     $('#warpFace').show();
     $('#faceVideo').show();
-
-    tracker = new tracking.ObjectTracker(['face', 'eye']);
-    tracker.setInitialScale(4);
-    tracker.setStepSize(2);
-    tracker.setEdgesDensity(0.1);
-    trackerTask = tracking.track('#faceVideo', tracker, { camera: true });
     trackerTask.run();
 
     tracker.on('track', function(event) {
@@ -60,6 +75,7 @@ function faceTrack() {
             }
 
             drawFace(rect);
+            faceInfo = rect;
 
             // setTimeout(function() {
             //     saveFace(rect);
@@ -94,13 +110,6 @@ function saveFace(rect) {
     }
     flag = false;
     trackerTask.stop();
-    // 接收截取照片的事件
-    socket.on('clientCaptureSnapshot', function(data) {
-        // 截取照片
-        // todo
-        console.log('抓取照片');
-        saveFace(rect);
-    });
     $('#faceVideo').hide();
     faceSuc(rect);
 }
@@ -110,13 +119,7 @@ function faceSuc(rect) {
     if (faceVideo.readyState === faceVideo.HAVE_ENOUGH_DATA) {
         try {
             context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
-            context.drawImage(
-                faceVideo,
-                0,
-                0,
-                canvasWidth,
-                canvasHeight
-            );
+            context.drawImage(faceVideo, 0, 0, canvasWidth, canvasHeight);
             // circleImg(
             //     context,
             //     faceVideo,
@@ -154,17 +157,16 @@ function showFaceRes(rect) {
 }
 
 // 接收服务端传回的 关闭 人脸识别弹层指令
-socket.on('clientCloseFaceScanLayer', function(data){
+socket.on('clientCloseFaceScanLayer', function(data) {
     // 关闭人脸识别弹层
     // todo
     console.log('关闭人脸识别');
+    $('#faceText1').text('开始人脸识别...');
     context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
-    flag = false;
-    trackerTask.stop();
     $('#warpFace').hide();
     $('#faceVideo').hide();
     $('#faceText1').hide();
-})
+});
 
 //动画处理
 var rander = function() {
