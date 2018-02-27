@@ -1,7 +1,9 @@
-// var socket = io('socket.qqdayu.com');
-var canvasWidth = $(window).width() / 2;
-var canvasHeight = $(window).height() / 2 + 10;
+var socket = io('http://socket.qqdayu.com');
+var canvasWidth = 640;
+var canvasHeight = 480;
 
+var faceWidth = canvasWidth;
+var faceHight = canvasHeight;
 var faceRadius = 240;
 var facelimite = 100;
 
@@ -20,14 +22,13 @@ faceVideo.width = canvasWidth;
 faceVideo.height = canvasHeight;
 
 // 识别人脸
-// socket.emit("hey");
+socket.emit('hey');
 // // 接收服务端传回的 打开 人脸识别弹层指令
-// socket.on('clientOpenFaceScanLayer', function(data){
-//     // 打开人脸识别弹层
-//     // todo
-//     // faceTrack();
-//     console.log('启动人脸识别');
-// })
+socket.on('clientOpenFaceScanLayer', function(data) {
+    // 打开人脸识别弹层
+    console.log('启动人脸识别');
+    faceTrack();
+});
 
 // trackerTask.stop(); // Stops the tracking
 // trackerTask.run(); // Runs it again anytime
@@ -62,9 +63,16 @@ function faceTrack() {
 
             drawFace(rect);
 
-            setTimeout(function() {
+            // setTimeout(function() {
+            //     saveFace(rect);
+            // }, 2000);
+            // 接收截取照片的事件
+            socket.on('clientCaptureSnapshot', function(data) {
+                // 截取照片
+                // todo
+                console.log('抓取照片');
                 saveFace(rect);
-            }, 2000);
+            });
         });
     });
 }
@@ -104,15 +112,22 @@ function faceSuc(rect) {
     if (faceVideo.readyState === faceVideo.HAVE_ENOUGH_DATA) {
         try {
             context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
-            circleImg(
-                context,
+            context.drawImage(
                 faceVideo,
-                rect.x - facelimite * 2.88,
-                rect.y - facelimite * 1.3,
-                $(window).width() / 4 - faceRadius,
-                $(window).height() / 4 - faceRadius,
-                faceRadius
+                0,
+                0,
+                canvasWidth,
+                canvasHeight
             );
+            // circleImg(
+            //     context,
+            //     faceVideo,
+            //     rect.x - facelimite * 2.88,
+            //     rect.y - facelimite * 1.3,
+            //     $(window).width() / 4 - faceRadius,
+            //     $(window).height() / 4 - faceRadius,
+            //     faceRadius
+            // );
             $('#faceText1').show();
             // $('#faceNearby').snabbt({
             //     fromOpacity: 0,
@@ -136,7 +151,7 @@ function circleImg(ctx, img, sx, sy, x, y, r) {
     var cy = y + r;
     ctx.arc(cx, cy, r, 0, 2 * Math.PI);
     ctx.clip();
-    ctx.drawImage(img, x, y, d, d * 0.92);
+    ctx.drawImage(img, x, y, d, d * 0.89);
     // ctx.drawImage(img, sx, sy, d, d, x, y, d, d);
     ctx.restore();
 }
@@ -147,6 +162,18 @@ function showFaceRes(rect) {
     //     faceTrack();
     // }, 2000);
 }
+
+// 接收服务端传回的 关闭 人脸识别弹层指令
+socket.on('clientCloseFaceScanLayer', function(data){
+    // 关闭人脸识别弹层
+    // todo
+    console.log('关闭人脸识别');
+    flag = false;
+    trackerTask.stop();
+    $('#warpFace').hide();
+    $('#faceVideo').hide();
+    $('#faceText1').hide();
+})
 
 //动画处理
 var rander = function() {

@@ -2618,9 +2618,11 @@ textarea {
 
 .c-content .word {
     position: relative;
-    width: 400px;
-    height: 432px;
-    background: url("./../images/lianghui.png") no-repeat;
+    top: -20px;
+    width: 724px;
+    height: 482px;
+    overflow: hidden;
+    background: url('./../images/lianghui.png') no-repeat;
 }
 
 .c-content .word li {

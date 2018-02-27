@@ -52,38 +52,16 @@
 .centerbox {
     position: relative;
     width: 724px;
-    height: 800px;
-    margin-left: 50px;
+    height: 826px;
+    margin-left: 40px;
     overflow: hidden;
-}
-.centerbox .mapbox {
-    position: relative;
-    top: -12px;
-    width: 724px;
-    height: 482px;
-    overflow: hidden;
-    background: url('./../images/map-bg.png') no-repeat;
-}
-.centerbox .mapbox .bmap {
-    width: 714px;
-    height: 413px;
-    overflow: hidden;
-    margin-left: 3px;
-    margin-top: 15px;
-}
-.centerbox .map-area {
-    position: absolute;
-    z-index: 88;
-    bottom: 32px;
-    right: 20px;
 }
 
 .centerbox .friendsbox {
     width: 724px;
-    height: 338px;
+    height: 394px;
     overflow: hidden;
     position: relative;
-    top: -10px;
 }
 
 /* 右边部分 */
@@ -92,14 +70,14 @@
     top: -6px;
     width: 355px;
     height: 800px;
-    margin-left: 50px;
+    margin-left: 40px;
     overflow: hidden;
 }
 .right-top {
     background: url('../images/peonum-bg.png') no-repeat;
     background-size: cover;
     width: 355px;
-    height: 122px;
+    height: 205px;
 }
 .right-bottom {
     background: url('../images/datum-bg.png') no-repeat;
