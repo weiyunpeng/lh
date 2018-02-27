@@ -73,7 +73,10 @@
                 <!-- 播放次数 end-->
 
                 <!-- 了解互联网 -->
-                <div class="left-bottom c-content">
+                <div class="left-bottom c-content column-center">
+                    <p class="left-bottom-tit">有<span>89547</span>人了解了“ 互联网+“</p>
+                    <div class="left-bottom-lb"></div>
+                    <ul class="row left-bottom-ec"></ul>
                 </div>
                 <!-- 了解互联网 end -->
             </div>
@@ -84,7 +87,9 @@
                 <!-- 两会 -->
                 <div class="lhbox c-content">
                     <ul class="word z-hide" id="word">
-                            <li soda-repeat="item in list" class="w-{{$index+1}}">{{item.keyword}}</li>
+                        <li soda-repeat="item in list" class="w-{{$index+1}}">{{item.keyword}}
+                            <img class="z-hide" src="{{item.images}}">
+                        </li>
                     </ul>
                     <ul class="word" id="detail"></ul>
                 </div>
@@ -126,15 +131,52 @@
             <!-- 右侧部分 -->
             <div class="rightbox column">
                 <!-- 当前代表人数 -->
-                <div class="right-top">
-                    <div class="right">阅读两会信息的河南群众人数</div>
-                    <ul class="row z-hide" id="peopleWord">
-                        <li soda-repeat="item in count" class="right-top-num">{{item}}</li>
-                    </ul>
-                    <ul class="row" id="peopleDetail">
+                <div class="right-top column">
+                    <div class="row">
+                        <p class="right-top-tit">阅读两会信息的河南群众人数</p>
+                        <ul class="row right-top-people z-hide" id="peopleWord">
+                            <li soda-repeat="item in count" class="column-center right-top-num">{{item}}</li>
+                            <span>人</span>
+                        </ul>
+                        <ul class="row right-top-people" id="peopleDetail">
+                        </ul>
+                    </div>
+                    <ul class="row right-top-echart">
+                        <li class="echart-01 column-center">
+                            <h4>性别比例</h4>
+                            <div class="show" id="echart1"></div>
+                        </li>
+                        <li class="echart-02 column-center">
+                                <h4>来源分析</h4>
+                                <div class="show" id="echart2"></div>
+                            </li>
                     </ul>
                 </div>
                 <!-- 当前代表人数 end-->
+
+                <!-- 观看AR报纸的河南群众人数 -->
+                <div class="right-middle column">
+                        <div class="row">
+                            <p class="right-top-tit">观看AR报纸的河南群众人数</p>
+                            <ul class="row right-top-people z-hide" id="arWord">
+                                <li soda-repeat="item in count" class="column-center right-top-num">{{item}}</li>
+                                <span>人</span>
+                            </ul>
+                            <ul class="row right-top-people" id="arDetail">
+                            </ul>
+                        </div>
+                        <ul class="row right-top-echart">
+                            <li class="echart-01 column-center">
+                                <h4>性别比例</h4>
+                                <div class="show" id="echart3"></div>
+                            </li>
+                            <li class="echart-02 column-center">
+                                    <h4>来源分析</h4>
+                                    <div class="show" id="echart4"></div>
+                                </li>
+                        </ul>
+                    </div>
+                    <!-- 观看AR报纸的河南群众人数 end-->
 
                 <!-- 数据分析 -->
                 <div class="right-bottom">
