@@ -1875,6 +1875,13 @@ textarea {
     display: none;
 }
 
+.o-hide{
+    opacity: 0;
+}
+.o-show{
+    opacity: 1;
+}
+
 .a-fadein {
     -webkit-animation: 3s ease-out both;
     -moz-animation: 3s ease-out both;

@@ -19,8 +19,11 @@
     <script src="./lib/soda.js"></script>
     <script src="./js/coor.js"></script>
     <script src="./lib/jquery.animateNumber.js"></script>
+    <script src="./lib/socket.io.js"></script>
+    <script src="./lib/snabbt.min.js"></script>
     <script src="./lib/tracking/tracking-min.js"></script>
     <script src="./lib/tracking/data/face-min.js"></script>
+    <script src="./lib/tracking/data/eye-min.js"></script>
     <script src="./lib/tracking/color_camera_gui.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./css/base.css">
@@ -148,10 +151,12 @@
     <!-- 大数据展示 end-->
 
     <!-- 人脸识别 -->
-    <div class="warp2" id="warpFace">
-        <div class="face-container column-center">
+    <div class="warp2 z-hide" id="warpFace">
+        <div id="facing" class="face-container column-center">
             <video id="faceVideo" preload autoplay loop muted></video>
             <canvas id="faceCanvas"></canvas>
+            <img id="faceNearby" class="face-nearby" src="./images/face-nearby.png">
+            <div id="faceText1" class="face-text1 z-hide">开始人脸识别... </div>
         </div>
     </div>
     <!-- 人脸识别 end-->

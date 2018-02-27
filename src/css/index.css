@@ -3,32 +3,31 @@
     width: 100%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    padding: 38px 48px 35px 38px;
     margin-top: 15px;
 }
 /* 左边模块 */
-.leftbox{
+.leftbox {
     width: 396px;
     height: 800px;
 }
-.leftbox .left-top{
+.leftbox .left-top {
     width: 100%;
 }
 
-.left-top .left-top-li{
-    color: #79A5DB;
+.left-top .left-top-li {
+    color: #79a5db;
     font-size: 14px;
-    background: url("../images/bfcs-bg.png") no-repeat;
+    background: url('../images/bfcs-bg.png') no-repeat;
     background-size: cover;
     width: 396px;
     height: 101px;
     margin-bottom: 15px;
 }
-.left-top-li-name{
+.left-top-li-name {
     position: relative;
     left: -20px;
 }
-.left-top-li-val span{
+.left-top-li-val span {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     font-size: 24px;
@@ -36,21 +35,21 @@
     margin-right: 10px;
     font-weight: bold;
 }
-.left-top-li-val-num1{
-    color: #FFFFFF;
+.left-top-li-val-num1 {
+    color: #ffffff;
     background-color: #131251;
 }
-.left-top-li-val-num2{
-    color: #8881ED;
+.left-top-li-val-num2 {
+    color: #8881ed;
     background-color: #141350;
 }
-.left-top-li-val-num3{
-    color: #5D38E4;
-    background-color: #12104D;
+.left-top-li-val-num3 {
+    color: #5d38e4;
+    background-color: #12104d;
 }
 
 /* 中间模块 */
-.centerbox{
+.centerbox {
     position: relative;
     width: 724px;
     height: 800px;
@@ -63,7 +62,7 @@
     width: 724px;
     height: 482px;
     overflow: hidden;
-    background: url("./../images/map-bg.png") no-repeat;
+    background: url('./../images/map-bg.png') no-repeat;
 }
 .centerbox .mapbox .bmap {
     width: 714px;
@@ -72,14 +71,14 @@
     margin-left: 3px;
     margin-top: 15px;
 }
-.centerbox .map-area{
+.centerbox .map-area {
     position: absolute;
     z-index: 88;
     bottom: 32px;
     right: 20px;
 }
 
-.centerbox  .friendsbox{
+.centerbox .friendsbox {
     width: 724px;
     height: 338px;
     overflow: hidden;
@@ -88,7 +87,7 @@
 }
 
 /* 右边部分 */
-.rightbox{
+.rightbox {
     position: relative;
     top: -6px;
     width: 355px;
@@ -96,14 +95,14 @@
     margin-left: 50px;
     overflow: hidden;
 }
-.right-top{
-    background: url("../images/peonum-bg.png") no-repeat;
+.right-top {
+    background: url('../images/peonum-bg.png') no-repeat;
     background-size: cover;
     width: 355px;
     height: 122px;
 }
-.right-bottom{
-    background: url("../images/datum-bg.png") no-repeat;
+.right-bottom {
+    background: url('../images/datum-bg.png') no-repeat;
     background-size: cover;
     width: 395px;
     height: 648px;
@@ -111,23 +110,53 @@
     top: 28px;
 }
 
-
-
 /* 人脸识别 */
-.warp2{
+.warp2 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/face-bg.png") no-repeat;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* background: url("../images/face-bg.png") no-repeat; */
     background-size: cover;
     z-index: 88;
 }
-.face-container{
+.face-container {
     width: 100%;
     height: 100%;
 }
-.warp2 video,canvas{
+.face-nearby {
+    position: relative;
+    z-index: 99;
+}
+.face-text1 {
+    position: absolute;
+    bottom: 146px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.face-res{
+    width: 100%;
+    height: 100%;
+}
+.face-res-con {
+    position: relative;
+    width: 837px;
+    height: 550px;
+    background: url('./../images/face-text-bg.png') no-repeat;
+    background-size: cover;
+    z-index: 88;
+}
+.face-res-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.warp2 video,
+canvas {
     position: absolute;
 }

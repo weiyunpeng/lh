@@ -1,14 +1,16 @@
+// var socket = io('socket.qqdayu.com');
 var canvasWidth = $(window).width() / 2;
-var canvasHeight = $(window).height() / 2;
+var canvasHeight = $(window).height() / 2 + 10;
 
-var faceWidth = 200;
-var faceHight = 200;
+var faceRadius = 240;
+var facelimite = 100;
 
 var faceVideo = document.getElementById('faceVideo');
 var faceCanvas = document.getElementById('faceCanvas');
 var context = faceCanvas.getContext('2d');
 
-var templateImageData;
+var tracker;
+var trackerTask;
 
 var flag = true;
 
@@ -18,61 +20,135 @@ faceVideo.width = canvasWidth;
 faceVideo.height = canvasHeight;
 
 // 识别人脸
+// socket.emit("hey");
+// // 接收服务端传回的 打开 人脸识别弹层指令
+// socket.on('clientOpenFaceScanLayer', function(data){
+//     // 打开人脸识别弹层
+//     // todo
+//     // faceTrack();
+//     console.log('启动人脸识别');
+// })
+
 // trackerTask.stop(); // Stops the tracking
 // trackerTask.run(); // Runs it again anytime
-var tracker = new tracking.ObjectTracker('face');
-tracker.setInitialScale(1);
-tracker.setStepSize(2);
-tracker.setEdgesDensity(0.1);
 
-var trackerTask = tracking.track('#faceVideo', tracker, { camera: true });
-tracker.on('track', function(event) {
-    context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
+// faceTrack();
+function faceTrack() {
+    tracker = new tracking.ObjectTracker(['face', 'eye']);
+    tracker.setInitialScale(4);
+    tracker.setStepSize(2);
+    tracker.setEdgesDensity(0.1);
+    trackerTask = tracking.track('#faceVideo', tracker, { camera: true });
 
-    event.data.forEach(function(rect) {
-        context.strokeStyle = '#004FE2';
-        context.strokeRect(rect.x, rect.y, rect.width, rect.height);
-        context.lineWidth = 1;
-        // context.font = '11px Helvetica';
-        // context.fillStyle = '#00CEF9';
-        // context.fillText(
-        //     'x: ' + rect.x + 'px',
-        //     rect.x + rect.width + 5,
-        //     rect.y + 11
-        // );
-        // context.fillText(
-        //     'y: ' + rect.y + 'px',
-        //     rect.x + rect.width + 5,
-        //     rect.y + 22
-        // );
+    flag = true;
+    trackerTask.run();
+    $('#warpFace').show();
+    $('#faceVideo').show();
 
-        setTimeout(function() {
+    tracker.on('track', function(event) {
+        context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
+
+        event.data.forEach(function(rect) {
+            if (!rect.width || !rect.height) {
+                return false;
+            }
+            if (rect.width < facelimite || rect.height < facelimite) {
+                return false;
+            }
+
+            if (rect.x > canvasWidth - faceRadius || rect.x < faceRadius) {
+                return false;
+            }
+
             drawFace(rect);
-        }, 2000);
+
+            setTimeout(function() {
+                saveFace(rect);
+            }, 2000);
+        });
     });
-});
+}
+
+// 识别并标出人脸
+function drawFace(rect) {
+    context.strokeStyle = '#004FE2';
+    context.strokeRect(rect.x, rect.y, rect.width, rect.height);
+    context.lineWidth = 1;
+    context.font = '11px Helvetica';
+    context.fillStyle = '#00CEF9';
+    context.fillText(
+        'x: ' + rect.x + 'px',
+        rect.x + rect.width + 5,
+        rect.y + 11
+    );
+    context.fillText(
+        'y: ' + rect.y + 'px',
+        rect.x + rect.width + 5,
+        rect.y + 22
+    );
+}
 
 // 保存并截取人脸
-function drawFace(rect) {
+function saveFace(rect) {
     if (!flag) {
         return;
     }
     flag = false;
     trackerTask.stop();
     $('#faceVideo').hide();
+    faceSuc(rect);
+}
+
+// 对人脸照片进行处理
+function faceSuc(rect) {
     if (faceVideo.readyState === faceVideo.HAVE_ENOUGH_DATA) {
         try {
             context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
-            context.drawImage(
+            circleImg(
+                context,
                 faceVideo,
-                $(window).width() / 4 - faceWidth/2,
-                $(window).height() / 4 - faceHight/2,
-                faceWidth,
-                faceHight
+                rect.x - facelimite * 2.88,
+                rect.y - facelimite * 1.3,
+                $(window).width() / 4 - faceRadius,
+                $(window).height() / 4 - faceRadius,
+                faceRadius
             );
-        } catch (err) {}
+            $('#faceText1').show();
+            // $('#faceNearby').snabbt({
+            //     fromOpacity: 0,
+            //     opacity: 1,
+            //     easing: 'easeOut'
+            // });
+            // setTimeout(function() {
+            //     showFaceRes(rect);
+            // }, 2000);
+        } catch (err) {
+            console.log(err);
+        }
     }
 }
 
-// 识别成功
-function faceSuc() {}
+// 画出圆形图片
+function circleImg(ctx, img, sx, sy, x, y, r) {
+    ctx.save();
+    var d = 2 * r;
+    var cx = x + r;
+    var cy = y + r;
+    ctx.arc(cx, cy, r, 0, 2 * Math.PI);
+    ctx.clip();
+    ctx.drawImage(img, x, y, d, d * 0.92);
+    // ctx.drawImage(img, sx, sy, d, d, x, y, d, d);
+    ctx.restore();
+}
+
+// 展示识别结果信息
+function showFaceRes(rect) {
+    // setTimeout(function() {
+    //     faceTrack();
+    // }, 2000);
+}
+
+//动画处理
+var rander = function() {
+    requestAnimationFrame(rander);
+};
