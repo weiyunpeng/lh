@@ -115,6 +115,7 @@ function saveFace(rect) {
     flag = false;
     trackerTask.stop();
     $('#faceVideo').hide();
+    $('#faceText1').show();
     faceSuc(rect);
 }
 
@@ -170,7 +171,6 @@ socket.on('clientCloseFaceScanLayer', function(data) {
 
 function closeFace() {
     $('#faceText1').text('开始人脸识别...');
-    $('#faceText2').text('');
     $('#faceText3').text('');
     context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
     $('#warpFace').hide();
