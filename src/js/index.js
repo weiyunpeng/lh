@@ -41,7 +41,7 @@ var optiondatum1 = {
     series: [
         {
             center: ['36.0%', '55%'],
-            name: '游客性别',
+            name: '性别',
             type: 'pie',
             radius: ['40%', '55%'],
             left: 6,
@@ -122,7 +122,7 @@ var datum2Option = {
     },
     series: [
         {
-            name: '客流来源',
+            name: '来源',
             type: 'pie',
             radius: '65%',
             center: ['30%', '45%'],
@@ -199,7 +199,7 @@ var optiondatum3 = {
     series: [
         {
             center: ['36.0%', '55%'],
-            name: '游客性别',
+            name: '性别',
             type: 'pie',
             radius: ['40%', '55%'],
             left: 6,
@@ -280,7 +280,7 @@ var datum4Option = {
     },
     series: [
         {
-            name: '客流来源',
+            name: '来源',
             type: 'pie',
             radius: '65%',
             center: ['30%', '45%'],
@@ -357,7 +357,7 @@ var optiondatum5 = {
     series: [
         {
             center: ['36.0%', '55%'],
-            name: '游客性别',
+            name: '性别',
             type: 'pie',
             radius: ['40%', '55%'],
             left: 6,
@@ -438,7 +438,7 @@ var datum6Option = {
     },
     series: [
         {
-            name: '客流来源',
+            name: '来源',
             type: 'pie',
             radius: '65%',
             center: ['30%', '45%'],
@@ -487,12 +487,18 @@ function qry_num(res) {
 }
 
 //两会热词
+var lhFlag = 0;
 function qry_lh(res) {
     var result = res.result.keyword;
     var tpl = $('#word').html();
     var data = {};
     data.list = result;
-    $('#detail').html(soda(tpl, data));
+    lhFlag++;
+    if (lhFlag == 5) {
+        lhFlag = 0;
+        $('#detail').empty();
+    }
+    $('#detail').append(soda(tpl, data));
 }
 
 // 点击两会热词展示图片信息
@@ -542,7 +548,7 @@ function qry_comments(res) {
         paginationClickable: true,
         spaceBetween: 0,
         centeredSlides: true,
-        autoplay: 50000,
+        autoplay: 5000,
         loop: true,
         autoplayDisableOnInteraction: false
     });
@@ -554,6 +560,16 @@ $('body').on('click', '.inner', function() {
     var num = $(this)
         .find('.del')
         .text();
+
+    loadData({
+        type: 'get',
+        url: 'http://m.qqdyw.cn/meeting/api/get',
+        data: {},
+        interval: 0,
+        callback: function(res) {
+            qry_comments(res);
+        }
+    });
 
     loadData({
         type: 'post',
@@ -619,6 +635,7 @@ function qry_ar(res) {
 // net
 var echart5 = echarts.init(document.getElementById('echart5'));
 var echart6 = echarts.init(document.getElementById('echart6'));
+var netFlag = 0;
 function qry_net(res) {
     var result = res.result;
 
@@ -631,6 +648,11 @@ function qry_net(res) {
     var tpl = $('#netWord').html();
     var data = {};
     data.list = result.list;
+    netFlag++;
+    if (netFlag == 5) {
+        netFlag = 0;
+        $('#netDetail').empty();
+    }
     $('#netDetail').append(soda(tpl, data));
 
     //性别比例
