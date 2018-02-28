@@ -2108,7 +2108,7 @@ textarea {
     padding: 20px 0;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     *zoom: 1;
 }
 
@@ -2620,7 +2620,7 @@ textarea {
     position: relative;
     top: -20px;
     width: 724px;
-    height: 482px;
+    height: 435px;
     overflow: hidden;
     background: url('./../images/lianghui.png') no-repeat;
 }
