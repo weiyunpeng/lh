@@ -17,7 +17,8 @@ app.on('ready', function() {
         minWidth: 680,
         height: 1080,
         title: app.getName(),
-        frame: true
+        frame: true,
+        fullscreen:true
     };
     mainWindow = new BrowserWindow(windowOptions);
     // Launch fullscreen with DevTools open, usage: npm run debug

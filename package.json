@@ -7,7 +7,7 @@
         "start": "electron .",
         "dev": "electron . --debug",
         "package": "electron-packager .  lianghui --overwrite --all --out=out --icon=favicon.ico --version 1.0.0 --overwrite --no-package-manager --ignore='(.git|node_modules)'",
-        "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=favicon.ico --osx-sign.identity='Developer ID Application: GitHub' --extend-info=assets/mac/info.plist --overwrite --no-package-manager --ignore='(.git|node_modules)'",
+        "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=favicon.ico --osx-sign.identity='Developer ID Application: GitHub' --overwrite --no-package-manager --ignore='(.git|node_modules)'",
         "package:win32": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=favicon.ico --overwrite --no-package-manager --ignore='(.git|node_modules)'",
         "package:win64": "electron-packager . --overwrite --platform=win32 --arch=x64 --out=out --icon=favicon.ico --overwrite --no-package-manager --ignore='(.git|node_modules)'",
         "package:linux": "electron-packager . lianghui --overwrite --platform=linux --arch=x64 --out=out --icon=favicon.ico --overwrite --no-package-manager --ignore='(.git|node_modules)'"

@@ -631,7 +631,7 @@ function qry_net(res) {
     var tpl = $('#netWord').html();
     var data = {};
     data.list = result.list;
-    $('#netDetail').html(soda(tpl, data));
+    $('#netDetail').append(soda(tpl, data));
 
     //性别比例
     optiondatum5.series[0].data = result.sex.data;
