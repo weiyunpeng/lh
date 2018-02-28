@@ -48,17 +48,90 @@
     background-color: #12104d;
 }
 
-.left-bottom{
+.left-bottom {
     position: relative;
     width: 392px;
     height: 448px;
-    background: url("./../images/net-bg.png") no-repeat;
+    background: url('./../images/net-bg.png') no-repeat;
     background-size: cover;
 }
-.left-bottom-lb{
+.left-bottom-tit {
+    position: relative;
+    top: 0px;
+    left: 82px;
+    color: #324ef4;
+    font-size: 18px;
+}
+.left-bottom-tit span {
+    color: #ffffff;
+    font-weight: bold;
+}
+.left-bottom-lb {
+    position: relative;
+    top: 10px;
     width: 373px;
     height: 193px;
     background-color: rgba(1, 5, 21, 0.9);
+}
+.net-ul {
+    width: 100%;
+    height: 196px;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10px;
+}
+.net-li {
+    overflow: hidden;
+    height: 60px;
+    border-bottom: 1px dashed #565f75;
+}
+.net-photo {
+    border-radius: 50%;
+    width: 44px;
+    height: 45px;
+}
+.net-word {
+    width: 190px;
+    color: #6b8bac;
+    font-size: 14px;
+    word-break: break-all;
+}
+.net-word label {
+    color: #3052f4;
+}
+.left-bottom-ec {
+    width: 358px;
+    height: 194px;
+}
+.echart-05 {
+    position: relative;
+    top: 15px;
+    left: 2px;
+    width: 163px;
+    height: 164px;
+}
+.echart-05 .show {
+    width: 140px;
+    height: 118px;
+}
+.echart-05 h4 {
+    position: relative;
+}
+.echart-06 {
+    position: relative;
+    top: 15px;
+    left: 20px;
+    width: 174px;
+    height: 164px;
+}
+.echart-06 .show {
+    width: 140px;
+    height: 118px;
+    top: 10px;
+}
+.echart-06 h4 {
+    position: relative;
 }
 
 /* 中间模块 */
@@ -75,12 +148,13 @@
     height: 394px;
     overflow: hidden;
     position: relative;
+    top: -14px;
 }
 
 /* 右边部分 */
 .rightbox {
     position: relative;
-    top: -6px;
+    top: 0;
     width: 355px;
     height: 800px;
     margin-left: 40px;
@@ -91,17 +165,17 @@
     background: url('../images/peonum-bg.png') no-repeat;
     background-size: cover;
     width: 355px;
-    height: 306px;
+    height: 192px;
     margin-bottom: 5px;
 }
-.right-middle{
+.right-middle {
     position: relative;
     background: url('../images/peonum-bg.png') no-repeat;
     background-size: cover;
     width: 355px;
-    height: 306px;
+    height: 192px;
 }
-.right-top-tit{
+.right-top-tit {
     position: relative;
     top: 12px;
     left: 18px;
@@ -109,56 +183,56 @@
     font-size: 14px;
     width: 104px;
     line-height: 16px;
-    word-break:break-all;
+    word-break: break-all;
 }
-.right-top-people{
+.right-top-people {
     position: absolute;
     top: 12px;
     right: 18px;
 }
-.right-top-num{
+.right-top-num {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     position: relative;
-    background: url("./../images/num-bg.png") no-repeat;
+    background: url('./../images/num-bg.png') no-repeat;
     background-size: cover;
     width: 22px;
     height: 29px;
     margin-right: 5px;
 }
-.right-top-echart{
+.right-top-echart {
     width: 300px;
     height: 118px;
 }
-.echart-01{
+.echart-01 {
     position: relative;
     top: 27px;
     left: 26px;
     width: 140px;
     height: 118px;
 }
-.echart-01 .show{
+.echart-01 .show {
     width: 140px;
     height: 118px;
 }
-.echart-01 h4{
+.echart-01 h4 {
     position: relative;
     top: 10px;
 }
-.echart-02{
+.echart-02 {
     position: relative;
     top: 27px;
     left: 42px;
     width: 140px;
     height: 118px;
 }
-.echart-02 .show{
+.echart-02 .show {
     width: 140px;
     height: 118px;
     top: 10px;
 }
-.echart-02 h4{
+.echart-02 h4 {
     position: relative;
     top: 10px;
 }
@@ -199,8 +273,16 @@
     font-size: 30px;
     font-weight: bold;
 }
+.face-text2 {
+    position: absolute;
+    text-align: center;
+    bottom: 88px;
+    color: #57ffff;
+    font-size: 30px;
+    font-weight: bold;
+}
 
-.face-res{
+.face-res {
     width: 100%;
     height: 100%;
 }
@@ -212,7 +294,7 @@
     background-size: cover;
     z-index: 88;
 }
-.face-res-img{
+.face-res-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -221,4 +303,26 @@
 .warp2 video,
 canvas {
     position: absolute;
+}
+
+.warp3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    z-index: 88;
+    text-align: center;
+    margin: 0 auto;
+}
+.wapr3-close{
+    position: absolute;
+    top: 80%;
+    left: 46%;
+}
+.warp3-image{
+    position: relative;
+    top: 30%;
 }

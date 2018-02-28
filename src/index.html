@@ -30,6 +30,7 @@
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/em.css">
     <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
 
@@ -44,6 +45,7 @@
         </div>
         <!--头部 end-->
 
+        <script src="./js/em.js"></script>
         <div class="boxbot row-center">
             <!-- 左边部分 -->
             <div class="leftbox column">
@@ -74,9 +76,36 @@
 
                 <!-- 了解互联网 -->
                 <div class="left-bottom c-content column-center">
-                    <p class="left-bottom-tit">有<span>89547</span>人了解了“ 互联网+“</p>
-                    <div class="left-bottom-lb"></div>
-                    <ul class="row left-bottom-ec"></ul>
+                    <p class="left-bottom-tit">有
+                        <span id="netCount">0</span>人了解了 &nbsp;"互联网+"</p>
+
+                    <div class="left-bottom-lb">
+                        <div class="bd">
+                            <ul class="z-hide net-ul" id="netWord">
+                                <li soda-repeat="item in list" class="row-around net-li">
+                                    <img src="{{item.headimgurl}}" class="net-photo">
+                                    <div class="net-word">
+                                        欢迎
+                                        <span>{{item.nickname}}</span>, {{item.sex}}对
+                                        <label>{{item.type}}</label> 很感兴趣。
+                                    </div>
+                                    <div class="net-time">{{item.time}}</div>
+                                </li>
+                            </ul>
+                            <ul class="net-ul" id="netDetail">
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="row left-bottom-ec">
+                        <li class="echart-05 column-center">
+                            <h4>性别比例</h4>
+                            <div class="show" id="echart5"></div>
+                        </li>
+                        <li class="echart-06 column-center">
+                            <h4>来源分析</h4>
+                            <div class="show" id="echart6"></div>
+                        </li>
+                    </ul>
                 </div>
                 <!-- 了解互联网 end -->
             </div>
@@ -87,8 +116,7 @@
                 <!-- 两会 -->
                 <div class="lhbox c-content">
                     <ul class="word z-hide" id="word">
-                        <li soda-repeat="item in list" class="w-{{$index+1}}">{{item.keyword}}
-                            <img class="z-hide" src="{{item.images}}">
+                        <li soda-repeat="item in list" class="w-{{$index+1}}" onclick="openImg($(this))" data-image="{{item.images}}">{{item.keyword}}
                         </li>
                     </ul>
                     <ul class="word" id="detail"></ul>
@@ -147,41 +175,72 @@
                             <div class="show" id="echart1"></div>
                         </li>
                         <li class="echart-02 column-center">
-                                <h4>来源分析</h4>
-                                <div class="show" id="echart2"></div>
-                            </li>
+                            <h4>来源分析</h4>
+                            <div class="show" id="echart2"></div>
+                        </li>
                     </ul>
                 </div>
                 <!-- 当前代表人数 end-->
 
                 <!-- 观看AR报纸的河南群众人数 -->
                 <div class="right-middle column">
-                        <div class="row">
-                            <p class="right-top-tit">观看AR报纸的河南群众人数</p>
-                            <ul class="row right-top-people z-hide" id="arWord">
-                                <li soda-repeat="item in count" class="column-center right-top-num">{{item}}</li>
-                                <span>人</span>
-                            </ul>
-                            <ul class="row right-top-people" id="arDetail">
-                            </ul>
-                        </div>
-                        <ul class="row right-top-echart">
-                            <li class="echart-01 column-center">
-                                <h4>性别比例</h4>
-                                <div class="show" id="echart3"></div>
-                            </li>
-                            <li class="echart-02 column-center">
-                                    <h4>来源分析</h4>
-                                    <div class="show" id="echart4"></div>
-                                </li>
+                    <div class="row">
+                        <p class="right-top-tit">观看AR报纸的河南群众人数</p>
+                        <ul class="row right-top-people z-hide" id="arWord">
+                            <li soda-repeat="item in count" class="column-center right-top-num">{{item}}</li>
+                            <span>人</span>
+                        </ul>
+                        <ul class="row right-top-people" id="arDetail">
                         </ul>
                     </div>
-                    <!-- 观看AR报纸的河南群众人数 end-->
-
-                <!-- 数据分析 -->
-                <div class="right-bottom">
+                    <ul class="row right-top-echart">
+                        <li class="echart-01 column-center">
+                            <h4>性别比例</h4>
+                            <div class="show" id="echart3"></div>
+                        </li>
+                        <li class="echart-02 column-center">
+                            <h4>来源分析</h4>
+                            <div class="show" id="echart4"></div>
+                        </li>
+                    </ul>
                 </div>
-                <!-- 数据分析 end-->
+                <!-- 观看AR报纸的河南群众人数 end-->
+
+                <!-- 右下角语义分析-->
+                <div class="embox">
+                    <div class="mtxt">要加强协调工作历史证明：团结，是我们消除一切困难 的有力武器。要把工作落到实处。要有自豪感。
+                    </div>
+                    <div class="type">
+                        <div class="list">
+                            <!--  <span class="current">名词</span> <span>介词</span> <span>名词</span> <span>介词</span> <span>名词</span>
+                         <span>介词</span> <span>名词</span> <span>介词</span> <span>介词</span> <span>名词</span>
+                         <span>介词</span>-->
+                        </div>
+                        <div class="btn"></div>
+                    </div>
+                    <div class="words">
+                        <!--  <span class="cc">要</span><span>协调</span><span>加强</span> <span>要</span><span>协调</span><span>加强</span>
+                     <span>要</span><span>协调</span><span>加强</span> <span>要</span><span>协调</span><span>加强</span>
+                     <span>要</span><span>协调</span><span>加强</span> <span>要</span><span>协调</span><span>加强</span>
+                     <span>要</span><span>协调</span><span>加强</span> <span>要</span><span>协调</span><span>加强</span>
+                     <span>要</span><span>协调</span><span>加强</span> <span>要</span><span>协调</span><span>加强</span>-->
+                    </div>
+                    <div class="tit2">情感分析</div>
+                    <div class="eot">
+                        <div class="em1"></div>
+                        <div class="em2"></div>
+                        <div class="prog">
+                            <div class="num"></div>
+                            <div class="t1">
+                                <!--负面情绪28%-->
+                            </div>
+                            <div class="t2">
+                                <!--正面情绪72%-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右下角语义分析 end-->
             </div>
             <!-- 右侧部分 end -->
         </div>
@@ -195,13 +254,29 @@
             <canvas id="faceCanvas"></canvas>
             <img id="faceNearby" class="face-nearby" src="./images/face-nearby.png">
             <div id="faceText1" class="face-text1 z-hide">开始人脸识别... </div>
+            <div id="faceText2" class="face-text2 z-hide">尊敬的 <span style="color: #ffffff;" id="faceText3"></span> 代表 您好！
+            <p>欢迎莅临2018全国两会河南大数据平台</p>
+            </div>
         </div>
     </div>
     <!-- 人脸识别 end-->
+
+    <!-- 弹出层 -->
+    <div class="warp3 z-hide column-center" id="warp3">
+        <img id="warp3Image" class="warp3-image">
+        <img class="wapr3-close" id="close" src="./images/close-btn.png">
+    </div>
+    <!-- 弹出层 end-->
+
+    <!-- 播放语音 -->
+    <audio id='ddsound' src='http://dywnormal-1251225286.cossh.myqcloud.com/upload/20180227/1519745407160929_077.MP3' align='center'
+        border='0' width='1' height='1' loop='false'></audio>
+    <!-- 播放语音 end-->
     <script src="./lib/dyw.min.js"></script>
     <script src="./lib/swiper.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/face.js"></script>
+    <script src="./js/em.js"></script>
     <script type="text/javascript">
         $(function () {
             // 需要动态计算的页面布局高度

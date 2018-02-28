@@ -32,16 +32,20 @@ socket.on('clientOpenFaceScanLayer', function(data) {
 socket.on('clientCaptureSnapshot', function(data) {
     // 截取照片
     // todo
-    console.log('抓取照片' + data);
+    console.log('抓取照片');
     saveFace();
 });
 // 选取人脸识别人物
-socket.on('clientChoosePeople', function(data){
+socket.on('clientChoosePeople', function(data) {
     // 截取照片
     // todo
-    console.log(data.people);
-    $('#faceText1').text(data.people);
-})
+    console.log(data);
+    $('#faceText1').hide();
+    $('#faceText2').show();
+    $('#faceText3').text(data.people);
+    $('#ddsound').attr('src', data.voice);
+    playSound();
+});
 
 tracker = new tracking.ObjectTracker(['face', 'eye']);
 tracker.setInitialScale(4);
@@ -161,13 +165,28 @@ socket.on('clientCloseFaceScanLayer', function(data) {
     // 关闭人脸识别弹层
     // todo
     console.log('关闭人脸识别');
+    closeFace();
+});
+
+function closeFace() {
     $('#faceText1').text('开始人脸识别...');
+    $('#faceText2').text('');
+    $('#faceText3').text('');
     context.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
     $('#warpFace').hide();
     $('#faceVideo').hide();
     $('#faceText1').hide();
-});
+    $('#faceText2').hide();
+    playSop();
+}
 
+function playSound() {
+    document.getElementById('ddsound').play();
+}
+
+function playSop() {
+    document.getElementById('ddsound').pause();
+}
 //动画处理
 var rander = function() {
     requestAnimationFrame(rander);
