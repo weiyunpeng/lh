@@ -60,7 +60,7 @@ var emt=function () {
         data: {
             id: 0
         },
-        interval: 0,
+        interval: 5000,
         callback: function (res) {
             setData(res)
         }

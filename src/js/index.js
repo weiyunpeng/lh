@@ -497,19 +497,19 @@ function qry_lh(res) {
 
 // 点击两会热词展示图片信息
 function openImg(item) {
-    console.log(item)
+    console.log(item);
     var img = item.attr('data-image');
-    console.log(img)
-    if(!img){
+    console.log(img);
+    if (!img) {
         return false;
     }
-    $('#warp3Image').attr('src',img);
+    $('#warp3Image').attr('src', img);
     $('#warp3').show();
-    $('#wrap3').css('display','flex');
+    $('#wrap3').css('display', 'flex');
 }
-$('#close').on('click',function () { 
+$('#close').on('click', function() {
     $('#warp3').hide();
- })
+});
 
 // 网友评论
 function qry_comments(res) {
@@ -571,6 +571,8 @@ $('body').on('click', '.inner', function() {
 });
 
 // 当前代表人数
+var echart1 = echarts.init(document.getElementById('echart1'));
+var echart2 = echarts.init(document.getElementById('echart2'));
 function qry_people(res) {
     var result = res.result.read_total;
     var tpl = $('#peopleWord').html();
@@ -583,17 +585,17 @@ function qry_people(res) {
     //性别比例
     optiondatum1.series[0].data = result.sex.data;
     optiondatum1.legend.data = result.sex.legend;
-    var echart1 = echarts.init(document.getElementById('echart1'));
     echart1.setOption(optiondatum1);
 
     //来源分析
     datum2Option.series[0].data = result.from.data;
     datum2Option.legend.data = _.take(result.from.legend, 6);
-    var echart2 = echarts.init(document.getElementById('echart2'));
     echart2.setOption(datum2Option);
 }
 
 // AR
+var echart3 = echarts.init(document.getElementById('echart3'));
+var echart4 = echarts.init(document.getElementById('echart4'));
 function qry_ar(res) {
     var result = res.result.ar_total;
     var tpl = $('#arWord').html();
@@ -606,17 +608,17 @@ function qry_ar(res) {
     //性别比例
     optiondatum3.series[0].data = result.sex.data;
     optiondatum3.legend.data = result.sex.legend;
-    var echart3 = echarts.init(document.getElementById('echart3'));
     echart3.setOption(optiondatum3);
 
     //来源分析
     datum4Option.series[0].data = result.from.data;
     datum4Option.legend.data = _.take(result.from.legend, 6);
-    var echart4 = echarts.init(document.getElementById('echart4'));
     echart4.setOption(datum4Option);
 }
 
 // net
+var echart5 = echarts.init(document.getElementById('echart5'));
+var echart6 = echarts.init(document.getElementById('echart6'));
 function qry_net(res) {
     var result = res.result;
 
@@ -634,13 +636,11 @@ function qry_net(res) {
     //性别比例
     optiondatum5.series[0].data = result.sex.data;
     optiondatum5.legend.data = result.sex.legend;
-    var echart5 = echarts.init(document.getElementById('echart5'));
     echart5.setOption(optiondatum5);
 
     //来源分析
     datum6Option.series[0].data = result.from.data;
     datum6Option.legend.data = _.take(result.from.legend, 6);
-    var echart6 = echarts.init(document.getElementById('echart6'));
     echart6.setOption(datum6Option);
 }
 var lH = $('#netDetail li').height();
@@ -661,7 +661,7 @@ loadData({
     type: 'get',
     url: 'http://m.qqdyw.cn/meeting/api/get',
     data: {},
-    interval: 0,
+    interval: 5000,
     callback: function(res) {
         qry_num(res);
         qry_lh(res);
@@ -675,7 +675,7 @@ loadData({
     type: 'get',
     url: 'http://m.qqdyw.cn/meeting/api/geth5',
     data: {},
-    interval: 0,
+    interval: 5000,
     callback: function(res) {
         qry_net(res);
     }

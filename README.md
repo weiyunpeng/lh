@@ -18,7 +18,7 @@ npm run package
 
 -  打某个平台的包
 苹果： npm run package:mac  
-windows: npm run package:win  
+windows: npm run package:win32/64  
 liunx: npm run package:linux
 ```
 
