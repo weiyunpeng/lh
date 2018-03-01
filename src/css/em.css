@@ -11,7 +11,7 @@
  .embox .tit2{ position: absolute; left: 0; top: 310px; width: 330px; text-align: center;}
  .embox .eot{ position: absolute; left: 20px; top: 335px; width: 295px; height: 42px; overflow: hidden;}
  .embox .em1{ position: absolute; left: 0; top:0; width: 26px; height: 26px; background: url("../images/em1.png") center center no-repeat;}
- .embox .em2 { position: absolute; right: 0; top: 0; width: 26px; height: 26px; background: url("../images/em1.png") center center no-repeat; }
+ .embox .em2 { position: absolute; right: 0; top: 0; width: 26px; height: 26px; background: url("../images/em2.png") center center no-repeat; }
  .embox .prog{ position: absolute; left: 38px; top: 3px; width: 220px; height: 20px; border-radius: 20px; overflow: hidden; background: #0761b6;}
  .embox .prog .num{ width: 20%; height: 20px; background: #4aeaed;}
  .embox .prog .t1 { position: absolute; left: 0; top: 0; color: #001325; font-size: 12px; padding-left: 10px; }

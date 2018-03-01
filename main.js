@@ -17,7 +17,7 @@ app.on('ready', function() {
         minWidth: 680,
         height: 1080,
         title: app.getName(),
-        frame: true,
+        frame: false,
         fullscreen:true
     };
     mainWindow = new BrowserWindow(windowOptions);
