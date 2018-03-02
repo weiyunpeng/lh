@@ -35,20 +35,19 @@
 </head>
 
 <body>
-    <!-- <img src="./images/aaa.jpg" style="position: absolute;top: 0;left: 0;    width: 100%;"> -->
     <div class="column-center">
-        <img src="./images/lh-tit.png">
+
+        <!--头部-->
+        <div class="fixed-topnav">
+            <div class="bigt row-center">
+                <img src="./images/lh-tit.png" class="w100">
+            </div>
+        </div>
+        <!--头部 end-->
+
         <!-- 大数据展示 -->
         <div class="warp1">
-            <!--头部-->
-            <div class="fixed-topnav">
-                <div class="bigt row-center">
-                    <img src="./images/bigtit.png">
-                </div>
-            </div>
-            <!--头部 end-->
-
-            <div class="boxbot row-center">
+            <div class="boxbot row-between">
                 <!-- 左边部分 -->
                 <div class="leftbox column">
                     <!-- 播放次数 -->
@@ -138,7 +137,7 @@
                                     <div class="comment z-hide" id="comment">
                                         <ul class="message swiper-slide" soda-repeat="des2 in list2">
                                             <li soda-repeat="mess in des2">
-                                                <div class="inner">
+                                                <div class="inner column-center">
                                                     <span class="del">{{mess.id}}
                                                         <strong></strong>
                                                     </span>

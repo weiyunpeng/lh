@@ -2,17 +2,17 @@
  .embox .mtxt{ position: absolute; left: 33px; top: 43px; width: 293px; height: 40px; line-height: 20px; overflow: hidden;font-size: 12px;}
  .embox .type{ position: absolute; width: 320px; height: 23px; left: 15px; top: 120px; overflow: hidden; }
  .embox .type .list{ -webkit-transition: all 1s; white-space: nowrap;  height: 23px; position: absolute; left: 0; top: 0;}
- .embox .type span{ display: inline-block; height: 21px; padding: 0 8px; cursor: pointer;  border: #2bb7ff 1px solid; color: #2bb7ff;  margin-right: 10px;}
- .embox .type span.current{ background:#2bb7ff; color: #000; }
- .embox .type .btn{ cursor: pointer; position: absolute; right: 0; top: -5px; width: 40px; height: 33px; background: url("../images/emright.png") no-repeat;}
+ .embox .type span{ display: inline-block; height: 21px; padding: 0 8px; cursor: pointer;  border: #a00e16 1px solid; color: #a00e16;  margin-right: 10px;}
+ .embox .type span.current{ background:#a00e16; color: #ffffff; }
+ .embox .type .btn{ cursor: pointer; position: absolute; right: -22px; top: -8px; width: 40px; height: 33px; background: url("../images/emright.png") no-repeat;}
  .embox .words{ position: absolute; left: 5px; top: 135px; padding: 30px 0; overflow: hidden; width: 326px; height: 105px; /*background: #fff8d5*/}
- .embox .words span{ display: inline-block; height: 22px;line-height: 22px; padding: 0 8px;  background: #22224c; color: #fff; margin-left: 10px; margin-top: 8px; font-size: 12px;vertical-align: middle;}
- .embox .words span.cc{ color: #2bb7ff;}
- .embox .tit2{ position: absolute; left: 0; top: 310px; width: 330px; text-align: center;}
+ .embox .words span{ display: inline-block; height: 22px;line-height: 22px; padding: 0 8px;  background: #b89c9c; color: #000000; margin-left: 10px; margin-top: 8px; font-size: 12px;vertical-align: middle;}
+ .embox .words span.cc{ color: #a00e16;}
+ .embox .tit2{ position: absolute; left: 0; top: 310px; width: 330px; text-align: center; color: #351b1b;}
  .embox .eot{ position: absolute; left: 20px; top: 335px; width: 295px; height: 42px; overflow: hidden;}
- .embox .em1{ position: absolute; left: 0; top:0; width: 26px; height: 26px; background: url("../images/em1.png") center center no-repeat;}
- .embox .em2 { position: absolute; right: 0; top: 0; width: 26px; height: 26px; background: url("../images/em2.png") center center no-repeat; }
- .embox .prog{ position: absolute; left: 38px; top: 3px; width: 220px; height: 20px; border-radius: 20px; overflow: hidden; background: #0761b6;}
- .embox .prog .num{ width: 20%; height: 20px; background: #4aeaed;}
- .embox .prog .t1 { position: absolute; left: 0; top: 0; color: #001325; font-size: 12px; padding-left: 10px; }
- .embox .prog .t2 { position: absolute; right: 0; top: 0; color: #001325; font-size: 12px; padding-right: 10px;; }
+ .embox .em1{ position: absolute; left: 0; top:0; width: 30px; height: 30px; background: url("../images/em1.png") center center no-repeat;}
+ .embox .em2 { position: absolute; right: 0; top: 0; width: 30px; height: 30px; background: url("../images/em2.png") center center no-repeat; }
+ .embox .prog{ position: absolute; left: 38px; top: 3px; width: 220px; height: 20px; border-radius: 20px; overflow: hidden; background: #b42227;}
+ .embox .prog .num{ width: 20%; height: 20px; background: linear-gradient(to right, #3782d0 , #b42227);background: -webkit-linear-gradient(left, #3782d0 , #b42227);}
+ .embox .prog .t1 { position: absolute; left: 0; top: 0; color: #ffffff; font-size: 12px; padding-left: 10px; }
+ .embox .prog .t2 { position: absolute; right: 0; top: 0; color: #ffffff; font-size: 12px; padding-right: 10px;; }

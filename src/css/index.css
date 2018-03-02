@@ -1,29 +1,29 @@
 .warp1{
     position: relative;
+    top: 96px;
 }
 .boxbot {
     position: relative;
-    width: 100%;
+    width: 1550px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    margin-top: 15px;
 }
 /* 左边模块 */
 .leftbox {
-    width: 396px;
-    height: 800px;
+    width: 392px;
+    height: 789px;
 }
 .leftbox .left-top {
     width: 100%;
 }
 
 .left-top .left-top-li {
-    color: #79a5db;
-    font-size: 14px;
+    color: #4e4f50;
+    font-size: 16px;
     background: url('../images/bfcs-bg.png') no-repeat;
     background-size: cover;
-    width: 396px;
-    height: 101px;
+    width: 100%;
+    height: 99px;
     margin-bottom: 15px;
 }
 .left-top-li-name {
@@ -33,28 +33,28 @@
 .left-top-li-val span {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    font-size: 24px;
+    font-size: 26px;
     padding: 6px 8px;
     margin-right: 10px;
     font-weight: bold;
 }
 .left-top-li-val-num1 {
-    color: #ffffff;
-    background-color: #131251;
+    color: #c5292b;
+    background-color: #caced7;
 }
 .left-top-li-val-num2 {
-    color: #8881ed;
-    background-color: #141350;
+    color: #970711;
+    background-color: #caced7;
 }
 .left-top-li-val-num3 {
-    color: #5d38e4;
-    background-color: #12104d;
+    color: #660008;
+    background-color: #caced7;
 }
 
 .left-bottom {
     position: relative;
-    width: 392px;
-    height: 448px;
+    width: 100%;
+    height: 456px;
     background: url('./../images/net-bg.png') no-repeat;
     background-size: cover;
 }
@@ -62,11 +62,11 @@
     position: relative;
     top: 0px;
     left: 82px;
-    color: #324ef4;
+    color: #cc3333;
     font-size: 18px;
 }
 .left-bottom-tit span {
-    color: #ffffff;
+    color: #730009;
     font-weight: bold;
 }
 .left-bottom-lb {
@@ -74,7 +74,7 @@
     top: 10px;
     width: 373px;
     height: 193px;
-    background-color: rgba(1, 5, 21, 0.9);
+    background-color: rgba(226, 226, 226, 0.8);
 }
 .net-ul {
     width: 100%;
@@ -87,7 +87,7 @@
 .net-li {
     overflow: hidden;
     height: 60px;
-    border-bottom: 1px dashed #565f75;
+    border-bottom: 1px dashed #b1bac6;
 }
 .net-photo {
     border-radius: 50%;
@@ -96,12 +96,16 @@
 }
 .net-word {
     width: 190px;
-    color: #6b8bac;
+    color: #1c1313;
     font-size: 14px;
     word-break: break-all;
 }
+.net-time{
+    font-size: 16px;
+    color: #351c1b;
+}
 .net-word label {
-    color: #3052f4;
+    color: #ff0000;
 }
 .left-bottom-ec {
     width: 358px;
@@ -120,6 +124,9 @@
 }
 .echart-05 h4 {
     position: relative;
+    color: #1b2435;
+    font-size: 14px;
+    font-weight: lighter;
 }
 .echart-06 {
     position: relative;
@@ -135,23 +142,25 @@
 }
 .echart-06 h4 {
     position: relative;
+    color: #1b2435;
+    font-size: 14px;
+    font-weight: lighter;
 }
 
 /* 中间模块 */
 .centerbox {
     position: relative;
-    width: 724px;
-    height: 826px;
-    margin-left: 40px;
+    width: 720px;
+    height: 789px;
+    /* margin-left: 40px; */
     overflow: hidden;
 }
 
 .centerbox .friendsbox {
     width: 724px;
-    height: 394px;
-    overflow: hidden;
+    height: 335px;
     position: relative;
-    top: -42px;
+    top: -56px;
 }
 
 /* 右边部分 */
@@ -159,8 +168,7 @@
     position: relative;
     top: 0;
     width: 355px;
-    height: 800px;
-    margin-left: 40px;
+    height: 789px;
 }
 .right-top {
     position: relative;
@@ -181,7 +189,7 @@
     position: relative;
     top: 12px;
     left: 18px;
-    color: #79a5db;
+    color: #000000;
     font-size: 14px;
     width: 104px;
     line-height: 16px;
@@ -191,6 +199,10 @@
     position: absolute;
     top: 12px;
     right: 18px;
+}
+.right-top-people span{
+    font-size: 16px;
+    color: #000000;
 }
 .right-top-num {
     font-size: 30px;
@@ -221,6 +233,9 @@
 .echart-01 h4 {
     position: relative;
     top: 10px;
+    color: #1b2435;
+    font-size: 14px;
+    font-weight: lighter;
 }
 .echart-02 {
     position: relative;
@@ -237,6 +252,9 @@
 .echart-02 h4 {
     position: relative;
     top: 10px;
+    color: #1b2435;
+    font-size: 14px;
+    font-weight: lighter;
 }
 
 .right-bottom {

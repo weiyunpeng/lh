@@ -2,9 +2,9 @@
 // var echart1 = echarts.init(document.getElementById('echart1'));
 var optiondatum1 = {
     color: [
-        '#28d1e6',
-        '#1a5cca',
-        '#0140b2',
+        '#ec4146',
+        '#730009',
+        '#980711',
         '#49149f',
         '#9226b2',
         '#edbdd9',
@@ -34,9 +34,8 @@ var optiondatum1 = {
         itemWidth: 10,
         itemHeight: 10,
         textStyle: {
-            color: '#d2d2d2'
-        },
-        data: ['佛语禅心', '送父母', '新年祝福', '送朋友', '喜乐祥和', '送子女']
+            color: '#351b1b'
+        }
     },
     series: [
         {
@@ -64,15 +63,7 @@ var optiondatum1 = {
                 normal: {
                     show: false
                 }
-            },
-            data: [
-                { value: 335, name: '佛语禅心' },
-                { value: 310, name: '送父母' },
-                { value: 234, name: '新年祝福' },
-                { value: 335, name: '送朋友' },
-                { value: 505, name: '喜乐祥和' },
-                { value: 1548, name: '送子女' }
-            ]
+            }
         }
     ]
 };
@@ -83,9 +74,9 @@ var optiondatum1 = {
 // var echart2 = echarts.init(document.getElementById('echart2'));
 var datum2Option = {
     color: [
-        '#28d1e6',
-        '#1a5cca',
-        '#0140b2',
+        '#ec4146',
+        '#730009',
+        '#980711',
         '#49149f',
         '#9226b2',
         '#edbdd9',
@@ -116,7 +107,7 @@ var datum2Option = {
         itemWidth: 10,
         itemHeight: 10,
         textStyle: {
-            color: '#d2d2d2'
+            color: '#351b1b'
         },
         data: []
     },
@@ -136,13 +127,6 @@ var datum2Option = {
                     show: false
                 }
             },
-            data: [
-                { value: 335, name: '洛阳' },
-                { value: 235, name: '洛阳' },
-                { value: 335, name: '洛阳' },
-                { value: 335, name: '洛阳' },
-                { value: 235, name: '洛阳' }
-            ],
             itemStyle: {
                 emphasis: {
                     shadowBlur: 10,
@@ -160,9 +144,9 @@ var datum2Option = {
 // var echart3 = echarts.init(document.getElementById('echart3'));
 var optiondatum3 = {
     color: [
-        '#28d1e6',
-        '#1a5cca',
-        '#0140b2',
+        '#ec4146',
+        '#730009',
+        '#980711',
         '#49149f',
         '#9226b2',
         '#edbdd9',
@@ -192,9 +176,8 @@ var optiondatum3 = {
         itemWidth: 10,
         itemHeight: 10,
         textStyle: {
-            color: '#d2d2d2'
-        },
-        data: ['佛语禅心', '送父母', '新年祝福', '送朋友', '喜乐祥和', '送子女']
+            color: '#351b1b'
+        }
     },
     series: [
         {
@@ -222,15 +205,7 @@ var optiondatum3 = {
                 normal: {
                     show: false
                 }
-            },
-            data: [
-                { value: 335, name: '佛语禅心' },
-                { value: 310, name: '送父母' },
-                { value: 234, name: '新年祝福' },
-                { value: 335, name: '送朋友' },
-                { value: 505, name: '喜乐祥和' },
-                { value: 1548, name: '送子女' }
-            ]
+            }
         }
     ]
 };
@@ -241,9 +216,9 @@ var optiondatum3 = {
 // var echart4 = echarts.init(document.getElementById('echart4'));
 var datum4Option = {
     color: [
-        '#28d1e6',
-        '#1a5cca',
-        '#0140b2',
+        '#ec4146',
+        '#730009',
+        '#980711',
         '#49149f',
         '#9226b2',
         '#edbdd9',
@@ -274,7 +249,7 @@ var datum4Option = {
         itemWidth: 10,
         itemHeight: 10,
         textStyle: {
-            color: '#d2d2d2'
+            color: '#351b1b'
         },
         data: []
     },
@@ -318,8 +293,8 @@ var datum4Option = {
 // var echart5 = echarts.init(document.getElementById('echart5'));
 var optiondatum5 = {
     color: [
-        '#28d1e6',
-        '#1a5cca',
+        '#730009',
+        '#ec4146',
         '#0140b2',
         '#49149f',
         '#9226b2',
@@ -350,9 +325,8 @@ var optiondatum5 = {
         itemWidth: 10,
         itemHeight: 10,
         textStyle: {
-            color: '#d2d2d2'
-        },
-        data: ['佛语禅心', '送父母', '新年祝福', '送朋友', '喜乐祥和', '送子女']
+            color: '#351b1b'
+        }
     },
     series: [
         {
@@ -380,15 +354,7 @@ var optiondatum5 = {
                 normal: {
                     show: false
                 }
-            },
-            data: [
-                { value: 335, name: '佛语禅心' },
-                { value: 310, name: '送父母' },
-                { value: 234, name: '新年祝福' },
-                { value: 335, name: '送朋友' },
-                { value: 505, name: '喜乐祥和' },
-                { value: 1548, name: '送子女' }
-            ]
+            }
         }
     ]
 };
@@ -399,9 +365,9 @@ var optiondatum5 = {
 // var echart6 = echarts.init(document.getElementById('echart6'));
 var datum6Option = {
     color: [
-        '#28d1e6',
-        '#1a5cca',
-        '#0140b2',
+        '#ec4146',
+        '#730009',
+        '#980711',
         '#49149f',
         '#9226b2',
         '#edbdd9',
@@ -432,7 +398,7 @@ var datum6Option = {
         itemWidth: 10,
         itemHeight: 10,
         textStyle: {
-            color: '#d2d2d2'
+            color: '#351b1b'
         },
         data: []
     },
@@ -452,13 +418,6 @@ var datum6Option = {
                     show: false
                 }
             },
-            data: [
-                { value: 335, name: '洛阳' },
-                { value: 235, name: '洛阳' },
-                { value: 335, name: '洛阳' },
-                { value: 335, name: '洛阳' },
-                { value: 235, name: '洛阳' }
-            ],
             itemStyle: {
                 emphasis: {
                     shadowBlur: 10,
@@ -683,7 +642,7 @@ loadData({
     type: 'get',
     url: 'http://m.qqdyw.cn/meeting/api/get',
     data: {},
-    interval: 5000,
+    interval: 0,
     callback: function(res) {
         qry_num(res);
         qry_lh(res);
