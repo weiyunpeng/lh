@@ -552,7 +552,8 @@ function qry_people(res) {
     var result = res.result.read_total;
     var tpl = $('#peopleWord').html();
     var data = {};
-    var numStr = result.read_number + '';
+    var fixPeoNum = PrefixInteger(result.read_number,8)
+    var numStr = fixPeoNum + '';
     var count = numStr.split('');
     data.count = count;
     $('#peopleDetail').html(soda(tpl, data));
@@ -575,7 +576,8 @@ function qry_ar(res) {
     var result = res.result.ar_total;
     var tpl = $('#arWord').html();
     var data = {};
-    var numStr = result.read_number + '';
+    var fixNum = PrefixInteger(result.read_number,8);
+    var numStr = fixNum + '';
     var count = numStr.split('');
     data.count = count;
     $('#arDetail').html(soda(tpl, data));
@@ -589,6 +591,11 @@ function qry_ar(res) {
     datum4Option.series[0].data = result.from.data;
     datum4Option.legend.data = _.take(result.from.legend, 6);
     echart4.setOption(datum4Option);
+}
+
+//数字补位
+function PrefixInteger(num, length) {
+    return (Array(length).join('0') + num).slice(-length);
 }
 
 // net
@@ -642,7 +649,7 @@ loadData({
     type: 'get',
     url: 'http://m.qqdyw.cn/meeting/api/get',
     data: {},
-    interval: 0,
+    interval: 5000,
     callback: function(res) {
         qry_num(res);
         qry_lh(res);
