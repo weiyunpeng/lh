@@ -642,7 +642,7 @@ loadData({
     type: 'get',
     url: 'http://m.qqdyw.cn/meeting/api/get',
     data: {},
-    interval: 0,
+    interval: 5000,
     callback: function(res) {
         qry_num(res);
         qry_lh(res);
