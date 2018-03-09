@@ -17,8 +17,14 @@ app.on('ready', function() {
         minWidth: 680,
         height: 1080,
         title: app.getName(),
-        frame: false,
-        fullscreen:true
+        icon: "./favicon.ico",
+        darkTheme: true,
+        plugin:true,
+        frame: true,
+        fullscreen:true,
+        webPreferences: {
+            plugins: true
+        }
     };
     mainWindow = new BrowserWindow(windowOptions);
     // Launch fullscreen with DevTools open, usage: npm run debug
