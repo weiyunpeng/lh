@@ -1,4 +1,4 @@
-.warp1{
+.warp1 {
     position: relative;
     top: 96px;
 }
@@ -100,7 +100,7 @@
     font-size: 14px;
     word-break: break-all;
 }
-.net-time{
+.net-time {
     font-size: 16px;
     color: #351c1b;
 }
@@ -200,7 +200,7 @@
     top: 12px;
     right: 18px;
 }
-.right-top-people span{
+.right-top-people span {
     font-size: 16px;
     color: #000000;
 }
@@ -337,12 +337,21 @@ canvas {
     text-align: center;
     margin: 0 auto;
 }
-.wapr3-close{
+.wapr3-close {
     position: absolute;
     top: 80%;
     left: 46%;
 }
-.warp3-image{
-    position: relative;
-    width:100%;
+.warp3-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 方法一 */
+    /* margin-top: -250px;
+    margin-left: -250px;
+    height: 500px;
+    width: 500px; */
+    /* 方法二*/
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
